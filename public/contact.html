@@ -91,7 +91,7 @@
                     <span class="eyebrow">Send a message</span>
                     <h3>Tell us what you need</h3>
                     <p>If you know the plant you want, mention it. If you do not, describe your space, sunlight, and goal.</p>
-                    <form class="contact-form" id="contactForm" action="https://us-central1-herbsandfruits-e0e82.cloudfunctions.net/api/send-email" method="POST">
+                    <form class="contact-form" id="contactForm" action="/send-email" method="POST">
                         <div class="form-row">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required placeholder="Your name">
@@ -105,6 +105,7 @@
                             <textarea id="message" name="message" required placeholder="Tell us what you want to buy or grow"></textarea>
                         </div>
                         <button class="button" type="submit">Send message</button>
+                        <p id="formStatus" class="form-status" aria-live="polite"></p>
                     </form>
                 </article>
             </section>
@@ -138,6 +139,43 @@
             if (menuList) {
                 menuList.classList.toggle("active");
             }
+        }
+
+        const contactForm = document.getElementById("contactForm");
+        const formStatus = document.getElementById("formStatus");
+
+        if (contactForm && formStatus) {
+            contactForm.addEventListener("submit", async (event) => {
+                event.preventDefault();
+                formStatus.textContent = "Sending your message...";
+                formStatus.dataset.state = "pending";
+
+                const formData = new FormData(contactForm);
+                const payload = Object.fromEntries(formData.entries());
+
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(payload)
+                    });
+
+                    const result = await response.json();
+
+                    if (!response.ok || !result.ok) {
+                        throw new Error(result.message || "Unable to send your message right now.");
+                    }
+
+                    formStatus.textContent = result.message;
+                    formStatus.dataset.state = "success";
+                    contactForm.reset();
+                } catch (error) {
+                    formStatus.textContent = error.message || "Unable to send your message right now.";
+                    formStatus.dataset.state = "error";
+                }
+            });
         }
     </script>
 </body>

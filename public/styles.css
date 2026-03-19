@@ -620,6 +620,21 @@ main {
     resize: vertical;
 }
 
+.form-status {
+    min-height: 24px;
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+.form-status[data-state="success"] {
+    color: var(--leaf);
+}
+
+.form-status[data-state="error"] {
+    color: var(--accent);
+}
+
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));

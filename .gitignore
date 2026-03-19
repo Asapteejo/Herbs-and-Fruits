@@ -1,0 +1,12 @@
+# .gitignore
+node_modules/
+functions/node_modules/
+dist/
+*.log
+.env
+.DS_Store
+.firebase/
+hosting..cache
+hosting.cHVibGlj.cache
+public/js/bundle.js
+public/js/bundle.js.LICENSE.txt

@@ -10,6 +10,18 @@ const FILTERS = [
   { id: 'fruits', label: 'Fruit plants' },
 ];
 
+const normalizeDisplayText = (value) => {
+  if (typeof value !== 'string') {
+    return '';
+  }
+
+  return value
+    .replace(/([a-z0-9])\-([a-zA-Z])/g, '$1 - $2')
+    .replace(/Nigeria's sun - drought/g, "Nigeria's sun, drought")
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+};
+
 const ProductGrid = () => {
   const [allProducts, setAllProducts] = useState({ herbs: [], fruits: [] });
   const [filter, setFilter] = useState('all');
@@ -140,10 +152,10 @@ const ProductGrid = () => {
 
               <div className="product-copy">
                 <h3>{item.name}</h3>
-                <p className="product-description">{item.description}</p>
+                <p className="product-description">{normalizeDisplayText(item.description)}</p>
                 <div className="product-meta">
                   <span>{getMetaTitle(item)}</span>
-                  <p>{item.benefits}</p>
+                  <p>{normalizeDisplayText(item.benefits)}</p>
                 </div>
                 <div className="product-footer">
                   <p className="price">{getDisplayPrice(item.price)}</p>
