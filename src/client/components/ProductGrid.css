@@ -219,6 +219,7 @@
   font-family: "Fraunces", serif;
   font-size: 1.55rem;
   line-height: 1.02;
+  color: #18261d;
 }
 
 .product-description,
@@ -280,6 +281,75 @@
   place-items: center;
   text-align: center;
   color: #5f6f63;
+}
+
+html[data-theme="dark"] .catalog-stat {
+  background: rgba(24, 39, 30, 0.92);
+  border-color: rgba(237, 246, 238, 0.08);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
+}
+
+html[data-theme="dark"] .catalog-stat strong,
+html[data-theme="dark"] .product-copy h3 {
+  color: #edf6ee;
+}
+
+html[data-theme="dark"] .catalog-stat span,
+html[data-theme="dark"] .catalog-overview p,
+html[data-theme="dark"] .product-description,
+html[data-theme="dark"] .product-meta p,
+html[data-theme="dark"] .product-note p,
+html[data-theme="dark"] .catalog-message {
+  color: #b7c8ba;
+}
+
+html[data-theme="dark"] .catalog-kicker,
+html[data-theme="dark"] .product-meta span,
+html[data-theme="dark"] .product-note span,
+html[data-theme="dark"] .tag-chip,
+html[data-theme="dark"] .enquiry-link {
+  color: #9bcca0;
+}
+
+html[data-theme="dark"] .catalog-active-label {
+  background: rgba(123, 187, 134, 0.12);
+  color: #dff3e3 !important;
+}
+
+html[data-theme="dark"] .catalog-search input,
+html[data-theme="dark"] .quick-filter-bar button,
+html[data-theme="dark"] .filter-bar button,
+html[data-theme="dark"] .product-card,
+html[data-theme="dark"] .product-card.herb,
+html[data-theme="dark"] .product-card.fruit {
+  background: rgba(20, 34, 26, 0.92);
+  border-color: rgba(237, 246, 238, 0.08);
+  color: #edf6ee;
+}
+
+html[data-theme="dark"] .product-badge {
+  background: rgba(24, 39, 30, 0.94);
+  color: #edf6ee;
+}
+
+html[data-theme="dark"] .product-category {
+  color: #9bcca0;
+}
+
+html[data-theme="dark"] .tag-chip,
+html[data-theme="dark"] .enquiry-link {
+  background: rgba(123, 187, 134, 0.1);
+}
+
+html[data-theme="dark"] .quick-filter-bar button,
+html[data-theme="dark"] .filter-bar button {
+  color: #d6e6d8;
+}
+
+html[data-theme="dark"] .quick-filter-bar button.is-active,
+html[data-theme="dark"] .filter-bar button.is-active {
+  color: #07100b;
+  background: linear-gradient(135deg, #9bcca0, #e5a35f);
 }
 
 @media (max-width: 640px) {

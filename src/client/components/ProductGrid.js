@@ -17,6 +17,74 @@ const QUICK_FILTERS = [
   { id: 'starter', label: 'Beginner picks' },
 ];
 
+const BROWSE_ROUTE_LABELS = {
+  tea: 'Showing tea picks',
+  kitchen: 'Showing cooking picks',
+  fruiting: 'Showing fruiting picks',
+  gifting: 'Showing gifting picks',
+  citrus: 'Showing citrus varieties',
+  tree: 'Showing fruit trees',
+  container: 'Showing container-friendly picks',
+};
+
+const TAG_MAP = {
+  herb: {
+    'Rosemary White': ['kitchen', 'tea', 'gifting'],
+    'Rosemary Green': ['kitchen', 'tea', 'container'],
+    Stevia: ['tea', 'container'],
+    'Lipia Alba': ['tea', 'container'],
+    'Garlic Chives': ['kitchen', 'container'],
+    'Onion Chives': ['kitchen', 'container'],
+    'Holy Basil': ['tea', 'container'],
+    'Lemon Basil': ['kitchen', 'container'],
+    'Purple Basil': ['kitchen', 'gifting'],
+    Peppermint: ['tea', 'container'],
+    'Chocolate Mint': ['tea', 'gifting', 'container'],
+    'Apple Mint': ['tea', 'gifting', 'container'],
+    Thyme: ['kitchen', 'tea', 'container'],
+    Parsley: ['kitchen', 'container'],
+    Cilantro: ['kitchen', 'container'],
+    Oregano: ['kitchen', 'tea', 'container'],
+    Dill: ['kitchen', 'container'],
+    Sage: ['kitchen', 'tea', 'gifting'],
+    Chives: ['kitchen', 'container'],
+    Tarragon: ['kitchen', 'gifting'],
+    Lavender: ['tea', 'gifting', 'container'],
+    'Cherry Tomatoes': ['kitchen', 'container', 'fruiting'],
+    'Curry Leaf': ['kitchen', 'container'],
+    'Lemon Balm': ['tea', 'container'],
+    Fennel: ['kitchen', 'tea', 'container'],
+    Jasmine: ['tea', 'gifting', 'container'],
+    Marjoram: ['kitchen', 'tea', 'container'],
+  },
+  fruit: {
+    'Pineapple Mint': ['tea', 'gifting', 'container'],
+    'Mayer Lemon': ['citrus', 'fruiting', 'container'],
+    Lemon: ['citrus', 'fruiting', 'container'],
+    'Pink Lemon': ['citrus', 'fruiting', 'gifting', 'container'],
+    Lime: ['citrus', 'fruiting', 'container'],
+    Orange: ['citrus', 'fruiting', 'tree'],
+    'Valencia Orange': ['citrus', 'fruiting', 'tree'],
+    Kumquat: ['citrus', 'fruiting', 'gifting', 'container'],
+    'Mandarin Orange': ['citrus', 'fruiting', 'tree'],
+    Mulberry: ['fruiting', 'tree'],
+    Pomegranate: ['fruiting', 'tree', 'gifting', 'container'],
+    Guava: ['fruiting', 'tree'],
+    Soursop: ['fruiting', 'tree'],
+    'Custard Apple': ['fruiting', 'tree', 'gifting'],
+    'Sugar Apple': ['fruiting', 'tree', 'gifting'],
+    Cherries: ['fruiting', 'gifting'],
+    Plum: ['fruiting', 'tree'],
+    'Yellow Plum': ['fruiting', 'tree', 'gifting'],
+    Peach: ['fruiting', 'tree'],
+    Apricot: ['fruiting', 'gifting'],
+    Grapes: ['fruiting', 'container'],
+    'Seeded Grapes': ['fruiting', 'container'],
+    'Seedless Grapes': ['fruiting', 'container', 'gifting'],
+    Banana: ['fruiting', 'container'],
+  },
+};
+
 const normalizeDisplayText = (value) => {
   if (typeof value !== 'string') {
     return '';
@@ -39,6 +107,8 @@ const getCollectionSummary = (category) => {
 
   return 'Fruit plants selected for home gardens, orchard starters, and productive containers.';
 };
+
+const getRouteTags = (item) => TAG_MAP[item.category]?.[item.name] || [];
 
 const getActiveBrowseLabel = ({ filter, quickFilter, query }) => {
   if (query) {
@@ -103,6 +173,7 @@ const ProductGrid = () => {
   const [filter, setFilter] = useState('all');
   const [quickFilter, setQuickFilter] = useState('all');
   const [query, setQuery] = useState('');
+  const [browseRoute, setBrowseRoute] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
   const [photoIndex, setPhotoIndex] = useState(0);
@@ -113,6 +184,7 @@ const ProductGrid = () => {
     const filterParam = params.get('filter');
     const quickParam = params.get('quick');
     const queryParam = params.get('query');
+    const browseParam = params.get('browse');
 
     if (filterParam && FILTERS.some((option) => option.id === filterParam)) {
       setFilter(filterParam);
@@ -124,6 +196,10 @@ const ProductGrid = () => {
 
     if (queryParam) {
       setQuery(queryParam);
+    }
+
+    if (browseParam && BROWSE_ROUTE_LABELS[browseParam]) {
+      setBrowseRoute(browseParam);
     }
   }, []);
 
@@ -183,6 +259,7 @@ const ProductGrid = () => {
     if (filter === 'herbs') {
       return allProducts
         .filter((item) => item.category === 'herb')
+        .filter((item) => applyBrowseRoute(item, browseRoute))
         .filter((item) => applyQuickFilter(item, quickFilter))
         .filter((item) => matchesQuery(item, normalizedQuery));
     }
@@ -190,20 +267,23 @@ const ProductGrid = () => {
     if (filter === 'fruits') {
       return allProducts
         .filter((item) => item.category === 'fruit')
+        .filter((item) => applyBrowseRoute(item, browseRoute))
         .filter((item) => applyQuickFilter(item, quickFilter))
         .filter((item) => matchesQuery(item, normalizedQuery));
     }
 
     return allProducts
+      .filter((item) => applyBrowseRoute(item, browseRoute))
       .filter((item) => applyQuickFilter(item, quickFilter))
       .filter((item) => matchesQuery(item, normalizedQuery));
-  }, [allProducts, filter, quickFilter, query]);
+  }, [allProducts, browseRoute, filter, quickFilter, query]);
 
   const activeBrowseLabel = getActiveBrowseLabel({
     filter,
     quickFilter,
     query: query.trim(),
   });
+  const activeRouteLabel = browseRoute ? BROWSE_ROUTE_LABELS[browseRoute] : '';
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -220,6 +300,12 @@ const ProductGrid = () => {
       params.set('quick', quickFilter);
     }
 
+    if (browseRoute) {
+      params.set('browse', browseRoute);
+    } else {
+      params.delete('browse');
+    }
+
     if (query.trim()) {
       params.set('query', query.trim());
     } else {
@@ -229,7 +315,7 @@ const ProductGrid = () => {
     const nextQuery = params.toString();
     const nextUrl = `${window.location.pathname}${nextQuery ? `?${nextQuery}` : ''}`;
     window.history.replaceState({}, '', nextUrl);
-  }, [filter, quickFilter, query]);
+  }, [browseRoute, filter, quickFilter, query]);
 
   const openLightbox = (index) => {
     setPhotoIndex(index);
@@ -277,7 +363,8 @@ const ProductGrid = () => {
           <p className="catalog-kicker">Browse with more control</p>
           <h2>Find the right plant faster.</h2>
           <p>{activeCollectionSummary}</p>
-          {activeBrowseLabel ? <p className="catalog-active-label">{activeBrowseLabel}</p> : null}
+          {activeRouteLabel ? <p className="catalog-active-label">{activeRouteLabel}</p> : null}
+          {!activeRouteLabel && activeBrowseLabel ? <p className="catalog-active-label">{activeBrowseLabel}</p> : null}
         </div>
         <div className="catalog-stats" aria-label="Catalog counts">
           <div className="catalog-stat">
@@ -446,6 +533,14 @@ function applyQuickFilter(item, quickFilter) {
   }
 
   return true;
+}
+
+function applyBrowseRoute(item, browseRoute) {
+  if (!browseRoute) {
+    return true;
+  }
+
+  return getRouteTags(item).includes(browseRoute);
 }
 
 function matchesQuery(item, query) {
