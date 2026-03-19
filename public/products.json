@@ -1,0 +1,636 @@
+{
+  "herbs": [
+    {
+      "id": 1,
+      "name": "Rosemary White",
+      "image": "/rosemary-white.jpg",
+      "description": "A rare variety with white flowers, woody aroma, perfect for stews and roasts in Nigeria.",
+      "benefits": "Boosts memory with its antioxidants perfect for Nigeria's stews or as a tea to sharpen your mind!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Rosemary's tough enough to handle Nigeria's sun-drought-resistant and fabulous!"
+    },
+    {
+      "id": 2,
+      "name": "Rosemary Green",
+      "image": "/rosemary-green.jpg",
+      "description": "Classic rosemary with a pine-like scent, a staple for Nigerian cooking and memory boosts.",
+      "benefits": "Improves focus and fights inflammation-add to pepper soup or brew as tea for a brainy lift!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Rosemary was worn by Greek scholars to boost memory-study smarter!"
+    },
+    {
+      "id": 3,
+      "name": "Stevia",
+      "image": "/stevia.jpg",
+      "description": "A natural sweetener with zero calories, ideal for teas and zobo in Nigeria.",
+      "benefits": "Sweetens without sugar spikes-perfect for diabetics or a guilt-free zobo sip!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Stevia's 300 times sweeter than sugar-talk about a sweet deal!"
+    },
+    {
+      "id": 4,
+      "name": "Lipia Alba",
+      "image": "/lipia-alba.jpg",
+      "description": "A citrus-mint herb used in calming teas, popular in Nigerian herbal blends.",
+      "benefits": "Eases stress and aids digestion-brew it after a long day in Lagos traffic!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Lipia Alba's camphor-like scent is a natural relaxant-chill out!"
+    },
+    {
+      "id": 5,
+      "name": "Garlic Chives",
+      "image": "/garlic-chives.jpg",
+      "description": "Mild garlic-flavored chives, great for egusi soup and stir-fries in Nigeria.",
+      "benefits": "Chop into soups or sprinkle on rice-adds a garlicky kick without the bite!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Garlic chives have been flavoring dishes for 4,000 years-timeless taste!"
+    },
+    {
+      "id": 6,
+      "name": "Onion Chives",
+      "image": "/onion-chives.jpg",
+      "description": "Delicate onion-flavored chives, perfect for jollof rice and garnishes.",
+      "benefits": "Snip over pepper soup or mix into salads for a subtle onion zing-fresh and easy!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Romans used onion chives for sunburn relief-multitasking greens!"
+    },
+    {
+      "id": 7,
+      "name": "Holy Basil",
+      "image": "/holy-basil.jpg",
+      "description": "Peppery and sacred, used in Nigerian teas for its calming effects.",
+      "benefits": "Reduces stress and boosts immunity-sip it as tea for a holy health kick!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Holy Basil's revered in India as Tulsi-temple-worthy wellness!"
+    },
+    {
+      "id": 8,
+      "name": "Lemon Basil",
+      "image": "/lemon-basil.jpg",
+      "description": "Citrusy basil with a zesty kick, ideal for Nigerian fish stews.",
+      "benefits": "Toss into soups or blend with peppers-citrus vibes meet spicy flair!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Lemon Basil's citral content mimics lemongrass-zesty twins!"
+    },
+    {
+      "id": 9,
+      "name": "Purple Basil",
+      "image": "/purple-basil.jpg",
+      "description": "Spicy purple basil, a vibrant addition to Nigerian soups.",
+      "benefits": "Stir into egusi or garnish rice-its color pops and flavor rocks!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Purple Basil's anthocyanins shield it from UV-nature's sunglasses!"
+    },
+    {
+      "id": 10,
+      "name": "Peppermint",
+      "image": "/peppermint.jpg",
+      "description": "Cool and refreshing, perfect for Nigerian teas and breath freshening.",
+      "benefits": "Soothes digestion and clears sinuses-brew it or chew it for a minty boost!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Peppermint's menthol is a natural decongestant-breathe easy!"
+    },
+    {
+      "id": 11,
+      "name": "Chocolate Mint",
+      "image": "/chocolate-mint.jpg",
+      "description": "Chocolate-scented mint, a sweet twist for Nigerian kunu drinks.",
+      "benefits": "Blend into kunu or desserts-chocolate vibes without the calories!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Chocolate Mint's a hybrid-wild mint meets cocoa dreams!"
+    },
+    {
+      "id": 12,
+      "name": "Apple Mint",
+      "image": "/apple-mint.jpg",
+      "description": "Soft, apple-scented mint, great for zobo and fruit salads in Nigeria.",
+      "benefits": "Mix into zobo or garnish fruits-its fuzzy leaves bring orchard freshness!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Apple Mint's fuzzy leaves smell like an apple party-fruity fun!"
+    },
+    {
+      "id": 13,
+      "name": "Thyme",
+      "image": "/thyme.jpg",
+      "description": "Tiny leaves with big flavor, a must for Nigerian stews and roasts.",
+      "benefits": "Antiseptic and flavorful-add to soups or gargle as a throat-soothing tea!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Thyme's thymol is in mouthwash-germ-killing flavor king!"
+    },
+    {
+      "id": 14,
+      "name": "Parsley",
+      "image": "/parsley.jpg",
+      "description": "Vitamin-rich garnish, perfect for egusi soup and breath freshening.",
+      "benefits": "Loaded with vitamins A, C, K-chop into soups or chew for fresh breath!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Romans crowned winners with parsley-leafy victory vibes!"
+    },
+    {
+      "id": 15,
+      "name": "Cilantro",
+      "image": "/cilantro.jpg",
+      "description": "Zesty cilantro, a love-it-or-hate-it star in Nigerian soups.",
+      "benefits": "Blend into pepper soup or salsa-its bold kick divides the crowd!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Cilantro's seeds are coriander-two flavors, one plant!"
+    },
+    {
+      "id": 16,
+      "name": "Oregano",
+      "image": "/oregano.jpg",
+      "description": "Robust oregano, a flavor bomb for Nigerian stews and pizza vibes.",
+      "benefits": "Antimicrobial and tasty-sprinkle on meats or brew for a healing tea!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Oregano means 'mountain joy' in Greek-peak flavor!"
+    },
+    {
+      "id": 17,
+      "name": "Dill",
+      "image": "/dill.jpg",
+      "description": "Tangy dill, perfect for fish stews and pickling in Nigeria.",
+      "benefits": "Add to seafood or suya sauce-its feathery flair lifts every bite!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Dill seeds kept churchgoers awake-sleepy no more!"
+    },
+    {
+      "id": 18,
+      "name": "Sage",
+      "image": "/sage.jpg",
+      "description": "Earthy sage, a savory boost for Nigerian meats and stuffing.",
+      "benefits": "Anti-inflammatory and wise-roast with chicken or sip as tea for wellness!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Sage was traded for tea in ancient China-pricey wisdom!"
+    },
+    {
+      "id": 19,
+      "name": "Chives",
+      "image": "/chives.jpg",
+      "description": "Mild onion chives, a garnish hero for Nigerian soups.",
+      "benefits": "Snip over jollof or stew-purple blooms add flair to flavor!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Chives bloom purple-garnish with sass!"
+    },
+    {
+      "id": 20,
+      "name": "Tarragon",
+      "image": "/tarragon.jpg",
+      "description": "Licorice-like tarragon, a fancy twist for Nigerian chicken.",
+      "benefits": "Elevate chicken stew or sauces-its dragon roots bring bold taste!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Tarragon's name means 'little dragon'-fiery flavor!"
+    },
+    {
+      "id": 21,
+      "name": "Lavender",
+      "image": "/lavender.jpg",
+      "description": "Floral lavender, calming for teas and desserts in Nigeria.",
+      "benefits": "Relaxes and soothes-add to kunu or bake into cakes for a floral chill!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Lavender's name comes from 'lavare'-Roman bath vibes!"
+    },
+    {
+      "id": 22,
+      "name": "Cherry Tomatoes",
+      "image": "/cherry-tomatoes.jpg",
+      "description": "Snack-sized tomatoes, bursting with flavor for Nigerian salads.",
+      "benefits": "Toss into stew or eat raw-little bursts of sweet-tart joy!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Cherry tomatoes are berries-botanical surprise!"
+    },
+    {
+      "id": 23,
+      "name": "Kale",
+      "image": "/kale.jpg",
+      "description": "Nutrient-packed kale, a superfood for Nigerian smoothies.",
+      "benefits": "More vitamin C than oranges-blend into smoothies or sauté for power!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Kale's a superfood champ-leafy strength in every bite!"
+    },
+    {
+      "id": 24,
+      "name": "Fennel",
+      "image": "/fennel.jpg",
+      "description": "Licorice-flavored fennel, great for fish and teas in Nigeria.",
+      "benefits": "Aids digestion and freshens breath-roast with fish or sip as tea!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Fennel was chewed in ancient India-breath mint OG!"
+    },
+    {
+      "id": 25,
+      "name": "Indian Curry",
+      "image": "/indian-curry.jpg",
+      "description": "Spicy curry leaves, a staple for Nigerian pepper soups.",
+      "benefits": "Fry into soups or stews-its aroma kicks up the heat!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Indian Curry leaves aren't curry powder-leafy impostor!"
+    },
+    {
+      "id": 26,
+      "name": "Jasmine",
+      "image": "/jasmine.jpg",
+      "description": "Fragrant jasmine, perfect for Nigerian teas and night gardens.",
+      "benefits": "Brew into tea or enjoy its scent-nighttime blooms steal the show!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Jasmine blooms at night-moth party central!"
+    },
+    {
+      "id": 27,
+      "name": "Sweet Marjoram",
+      "image": "/sweet-marjoram.jpg",
+      "description": "Mild oregano cousin, soothing for Nigerian soups.",
+      "benefits": "Eases headaches and adds flavor-stir into stew or sip as tea!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Greeks used marjoram for headaches-herb lullaby!"
+    },
+    {
+      "id": 28,
+      "name": "Celery",
+      "image": "/celery.jpg",
+      "description": "Crunchy celery, a fibrous boost for Nigerian stews.",
+      "benefits": "Detoxes and hydrates-chop into egusi or snack raw for crunch!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Celery started in marshes-swamp to superstar!"
+    }
+  ],
+  "fruits": [
+    {
+      "id": 29,
+      "name": "Strawberry",
+      "image": "/strawberry.jpg",
+      "description": "Sweet red berries with vitamin C, a rare treat in Nigerian smoothies.",
+      "benefits": "Boosts immunity with antioxidants-blend into smoothies or snack fresh for a sweet lift!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Strawberries aren't true berries-seeds on the outside fool us all!"
+    },
+    {
+      "id": 30,
+      "name": "Apple Anna",
+      "image": "/apple-anna.jpg",
+      "description": "Sweet apples thriving in Nigeria's warm north, perfect for snacking.",
+      "benefits": "Eat fresh or juice-warm-climate apples with a crisp, sweet bite!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Anna apples were bred in Israel-sun-loving sweeties!"
+    },
+    {
+      "id": 31,
+      "name": "Apple Red",
+      "image": "/apple-red.jpg",
+      "description": "Sweet-tart red apples, a vibrant addition to Nigerian salads.",
+      "benefits": "Slice into salads or bake-red blush means extra antioxidants!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Red apples get their color from anthocyanins-sun-kissed beauty!"
+    },
+    {
+      "id": 32,
+      "name": "Apple Green",
+      "image": "/apple-green.jpg",
+      "description": "Tart green apples, crisp and refreshing for Nigerian juices.",
+      "benefits": "Juice or bake into pies-tartness cuts through the sweetness!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Green apples have less sugar-tart and sassy!"
+    },
+    {
+      "id": 33,
+      "name": "Apple Wambugu",
+      "image": "/apple-wambugu.jpg",
+      "description": "Tropical apples from Kenya, sweet and juicy for Nigeria's climate.",
+      "benefits": "Snack fresh or blend-tropical sweetness meets Nigerian sun!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Wambugu apples thrive in heat-Kenya's juicy export!"
+    },
+    {
+      "id": 34,
+      "name": "Pomegranate",
+      "image": "/pomegranate.jpg",
+      "description": "Ruby-red seeds packed with antioxidants, a Nigerian juice favorite.",
+      "benefits": "Fights inflammation-juice it or sprinkle seeds for a tart health boost!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Pomegranates average 613 seeds-count 'em for fun!"
+    },
+    {
+      "id": 35,
+      "name": "Fig",
+      "image": "/fig.jpg",
+      "description": "Soft, sweet figs, a northern Nigerian snack delight.",
+      "benefits": "Eat fresh or dry-nature's candy with a fiber punch!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Figs are 5,000 years old-ancient sweetness!"
+    },
+    {
+      "id": 36,
+      "name": "Pokan Mandarin",
+      "image": "/pokan-mandarin.jpg",
+      "description": "Easy-peel mandarins, sweet and seedless for Nigerian snacks.",
+      "benefits": "Peel and eat or juice-citrus convenience at its best!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Mandarins were named after Chinese officials-fancy robes!"
+    },
+    {
+      "id": 37,
+      "name": "Tangelo",
+      "image": "/tangelo.jpg",
+      "description": "Sweet-tart hybrid of tangerine and grapefruit, a Nigerian juice star.",
+      "benefits": "Juice or segment-its funky neck shape screams flavor royalty!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Tangelo's neck is its signature-citrus crown!"
+    },
+    {
+      "id": 38,
+      "name": "Mayer Lemon",
+      "image": "/mayer-lemon.jpg",
+      "description": "Sweet lemons, less tart, perfect for Nigerian cakes and drinks.",
+      "benefits": "Zest into cakes or juice-sweet citrus with a mandarin twist!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Mayer lemons are a mandarin hybrid-China's sweet gift!"
+    },
+    {
+      "id": 39,
+      "name": "Eureka Lemon",
+      "image": "/eureka-lemon.jpg",
+      "description": "Tart lemons available year-round, a Nigerian kitchen staple.",
+      "benefits": "Squeeze into tea or marinade-tartness that never quits!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Eureka lemons started in California-1850s citrus star!"
+    },
+    {
+      "id": 40,
+      "name": "Variegated Red Lemon",
+      "image": "/variegated-red-lemon.jpg",
+      "description": "Pink-fleshed lemons, a stunning garnish for Nigerian dishes.",
+      "benefits": "Slice for drinks or decor-pink insides steal the show!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Variegated lemons hide pink flesh-party inside!"
+    },
+    {
+      "id": 41,
+      "name": "Assam Indian Lemon",
+      "image": "/assam-indian-lemon.jpg",
+      "description": "Small, spicy lemons, a zingy boost for Nigerian soups.",
+      "benefits": "Add to pepper soup-tiny size, big flavor punch!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Assam lemons spice up Indian curries-fiery little guys!"
+    },
+    {
+      "id": 42,
+      "name": "Red Grape Citrus",
+      "image": "/red-grape-citrus.jpg",
+      "description": "Sweet-tart citrus with lycopene, perfect for Nigerian juices.",
+      "benefits": "Heart-healthy lycopene-juice it red for a vibrant boost!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Red Grape Citrus shares pigments with tomatoes-color cousins!"
+    },
+    {
+      "id": 43,
+      "name": "Calamansi Lemon",
+      "image": "/calamansi-lemon.jpg",
+      "description": "Tiny sour lemons, a tangy hit for Nigerian marinades.",
+      "benefits": "Marinate suya or squeeze into drinks-small but mighty!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Calamansi is a kumquat hybrid-tiny tang titan!"
+    },
+    {
+      "id": 44,
+      "name": "Washington Navel Orange",
+      "image": "/washington-navel-orange.jpg",
+      "description": "Seedless sweet oranges, a Nigerian snacking favorite.",
+      "benefits": "Peel and eat or juice-navel's baby orange inside is adorable!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Navel oranges have a mini orange inside-cute quirk!"
+    },
+    {
+      "id": 45,
+      "name": "Valencia Orange",
+      "image": "/valencia-orange.jpg",
+      "description": "A juicy orange prized for its sweetness and high juice content. In Nigeria, it's widely juiced or eaten fresh, especially in urban markets.",
+      "benefits": "Juice Valencia oranges for a sweet drink or use in fruit salads. In Nigeria, they're a juicy staple, adding sunshine to meals and refreshments!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Valencia oranges are the world's top juice orange, named after the Spanish city of Valencia."
+    },
+    {
+      "id": 46,
+      "name": "Kumquat Orange",
+      "image": "/kumquat-orange.jpg",
+      "description": "A small, edible-peel orange with a sweet-tart flavor. In Nigeria, it's eaten whole as a snack or used in fruit mixes for its unique taste.",
+      "benefits": "Eat kumquats whole for a burst of flavor or mix with mangoes. In Nigeria, they're a quirky snack, adding a sweet peel and tart flesh to your day!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Kumquats are the only citrus fruit where the peel is sweeter than the flesh."
+    },
+    {
+      "id": 47,
+      "name": "Clementine Orange",
+      "image": "/clementine-orange.jpg",
+      "description": "A small, seedless orange with a sweet, mild flavor. In Nigeria, it's a convenient snack and added to local fruit salads or juices.",
+      "benefits": "Peel clementines for an easy snack or juice with pineapple. In Nigeria, their sweetness makes them a kid-friendly treat and a salad staple!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Clementines were discovered by a French missionary, Father Clément, in Algeria in the early 1900s."
+    },
+    {
+      "id": 48,
+      "name": "Mulberry",
+      "image": "/mulberry.jpg",
+      "description": "Dark, sweet berries rich in iron and antioxidants. In Nigeria, mulberries are eaten fresh or dried, and used in northern snacks or herbal teas.",
+      "benefits": "Mulberries support blood health with iron and fight aging with antioxidants. In Nigeria, dry them for snacks or brew into tea for a nutritious boost!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Mulberry trees were cultivated by the Chinese for 5,000 years to feed silkworms for silk production."
+    },
+    {
+      "id": 49,
+      "name": "Pakistan Long Mulberry",
+      "image": "/pakistan-long-mulberry.jpg",
+      "description": "An elongated mulberry variety with a sweet, juicy taste. In Nigeria, it's consumed fresh or dried, popular in northern regions as a snack.",
+      "benefits": "Dry Pakistan long mulberries for a sweet snack or mix with nuts. In Nigeria's north, they're a juicy treat, perfect for kids and adults alike!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Pakistan Long Mulberries can grow up to 3 inches long, much larger than typical mulberries."
+    },
+    {
+      "id": 50,
+      "name": "Blackberry",
+      "image": "/blackberry.jpg",
+      "description": "Dark, tart berries packed with vitamin C and fiber. In Nigeria, they're eaten fresh or used in juices and local desserts when available.",
+      "benefits": "Blackberries are rich in antioxidants, supporting heart health and reducing inflammation. In Nigeria, blend them into smoothies or eat fresh for a tart, nutritious snack-perfect for a healthy boost!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Blackberries were used by ancient Greeks to treat gout due to their anti-inflammatory properties."
+    },
+    {
+      "id": 51,
+      "name": "Soursop",
+      "image": "/soursop.jpg",
+      "description": "A tropical fruit with creamy, tart flesh, rich in vitamin C and antioxidants. In Nigeria, it's juiced or eaten fresh, and used in herbal medicine for immunity.",
+      "benefits": "Soursop's antioxidants may boost immunity and energy. In Nigeria, juice it with ginger for a refreshing drink or eat the flesh as a natural remedy-popular for its wellness properties!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Soursop seeds contain annonacin, a compound studied for its potential anti-cancer properties."
+    },
+    {
+      "id": 52,
+      "name": "Custard Apple",
+      "image": "/custard-apple.jpg",
+      "description": "Also known as cherimoya, it has a creamy, sweet flesh. In Nigeria, it's eaten fresh and called "Sweetsop" locally, used for its nutritional benefits.",
+      "benefits": "Scoop custard apple flesh as a sweet snack or blend into smoothies. In Nigeria, it's a beloved treat, often enjoyed fresh or mixed with local fruits for a creamy delight!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Custard apples were prized by the Incas and are nicknamed 'the fruit of the gods.'"
+    },
+    {
+      "id": 53,
+      "name": "Sweetsop",
+      "image": "/sweetsop.jpg",
+      "description": "Also called sugar apple, this fruit has a sweet, segmented flesh. In Nigeria, it's a popular snack and juiced.",
+      "benefits": "Eat sweetsop fresh for a sugary treat or juice it with lime. In Nigeria, it's a street snack favorite, loved for its sweet, custard-like texture!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Sweetsop's scientific name, Annona squamosa, refers to its scaly skin resembling a pine cone."
+    },
+    {
+      "id": 54,
+      "name": "Cherry",
+      "image": "/cherry.jpg",
+      "description": "Small, sweet-tart fruits packed with antioxidants and vitamin C. In Nigeria, cherries are a rare treat, eaten fresh or used in imported-style desserts.",
+      "benefits": "Eat cherries fresh as a premium snack or top cakes with them. In Nigeria, their rarity makes them a special addition to fruit salads or desserts!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Cherries were brought to Rome from Turkey in 72 BCE by a general named Lucullus."
+    },
+    {
+      "id": 55,
+      "name": "Plum",
+      "image": "/plum.jpg",
+      "description": "Juicy, sweet-tart plums rich in vitamins A and C. In Nigeria, they're eaten fresh or dried into prunes, occasionally used in northern fruit mixes.",
+      "benefits": "Plums aid digestion and boost immunity with their vitamin content. In Nigeria, enjoy them fresh or dried as prunes for a fiber-rich snack!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Plums were domesticated in China over 2,000 years ago and are related to peaches and almonds."
+    },
+    {
+      "id": 56,
+      "name": "Yellow Plum",
+      "image": "/yellow-plum.jpg",
+      "description": "A sweeter, golden variety of plum with juicy, tender flesh. In Nigeria, it's a premium snack and could be used in local jams or fruit salads.",
+      "benefits": "Turn yellow plums into jam or slice into salads. In Nigeria, their sweetness makes them a delightful addition to fruit mixes or a standalone treat!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Yellow plums are often sweeter because they ripen longer on the tree than darker varieties."
+    },
+    {
+      "id": 57,
+      "name": "Dwarf Hass Avocado",
+      "image": "/dwarf-hass-avocado.jpg",
+      "description": "A compact version of the Hass avocado, with creamy, nutty flesh. In Nigeria, it's mashed into spreads or eaten with bread, valued for its healthy fats.",
+      "benefits": "Dwarf Hass avocados are packed with healthy fats that support heart health. In Nigeria, mash them with bread or blend into smoothies for a creamy, nutritious boost!",
+      "price":"Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Hass avocados are named after Rudolph Hass, a mailman who patented the variety in 1935."
+    },
+    {
+      "id": 58,
+      "name": "Jumbo White Guava",
+      "image": "/jumbo-white-guava.jpg",
+      "description": "A large, white-fleshed guava with a sweet, mild flavor. In Nigeria, it's eaten fresh or juiced for its vitamin C.",
+      "benefits": "Jumbo white guavas are loaded with vitamin C, great for immunity. In Nigeria, juice them or eat fresh for a sweet, healthy snack that fights colds!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Guavas have more vitamin C per gram than oranges and were used by sailors to prevent scurvy."
+    },
+    {
+      "id": 59,
+      "name": "Seeded Grape",
+      "image": "/seeded-grape.jpg",
+      "description": "Traditional grapes with seeds, offering a sweet, juicy taste. In Nigeria, they're eaten fresh or used in northern snacks and fruit blends.",
+      "benefits": "Eat seeded grapes fresh or mix with nuts for a snack. In Nigeria's north, they're a juicy addition to fruit salads, bringing a classic grape flavor!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Grapes were one of the first fruits to be fermented into wine, over 8,000 years ago."
+    },
+    {
+      "id": 60,
+      "name": "Seedless Grape",
+      "image": "/seedless-grape.jpg",
+      "description": "Sweet, seedless grapes perfect for easy snacking. In Nigeria, they're a premium snack, often imported, and used in fruit salads or juices.",
+      "benefits": "Enjoy seedless grapes as a convenient snack or toss into salads. In Nigeria, their ease and sweetness make them a luxury treat for all ages!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Seedless grapes are created through selective breeding, not genetic modification."
+    },
+    {
+      "id": 61,
+      "name": "Dwarf Pawpaw",
+      "image": "/dwarf-pawpaw.jpg",
+      "description": "A smaller papaya variety with sweet, orange flesh. In Nigeria, it's eaten fresh or blended into smoothies.",
+      "benefits": "Dwarf pawpaw's papain aids digestion, and its vitamins boost immunity. In Nigeria, enjoy it fresh or in smoothies for a tropical, healthy treat!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Papayas contain papain, an enzyme that helps digest proteins and is used in meat tenderizers."
+    },
+    {
+      "id": 62,
+      "name": "Banana",
+      "image": "/banana.jpg",
+      "description": "Bananas are potassium-packed powerhouses, perfect for a quick energy boost. They're technically berries-how a-peeling is that? In Nigeria, they're a staple snack.",
+      "benefits": "Eat bananas fresh or fry them as plantain chips. In Nigeria, they're a versatile staple, enjoyed alone or paired with groundnut for a classic combo!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Bananas are the world's most consumed fruit and grow upside-down, pointing upward."
+    },
+    {
+      "id": 63,
+      "name": "Watermelon",
+      "image": "/watermelon.jpg",
+      "description": "Watermelons are hydration heroes, 92% water, with a sweet crunch that's summer in every bite. They're the melon-choly cure you need! In Nigeria, they're a refreshing snack.",
+      "benefits": "Watermelon hydrates and provides lycopene for heart health. In Nigeria, enjoy it fresh or juice it for a cool, sweet treat-perfect for hot days!",
+      "price": "Contact us for price update",
+      "priceMessage": "Contact us for price update",
+      "alert": "Watermelons were first grown in Egypt 5,000 years ago and depicted in tomb paintings."
+    }
+  ]
+}

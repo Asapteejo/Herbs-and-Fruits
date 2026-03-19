@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Herbs and Fruits Nigeria and the mission behind our herb and fruit plant collection.">
+    <meta name="keywords" content="about Herbs and Fruits Nigeria, herb business Nigeria, fruit plants Nigeria">
+    <meta name="robots" content="index, follow">
+    <title>About | Herbs and Fruits Nigeria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="page-shell">
+        <div class="leaf-background"></div>
+
+        <header class="site-header">
+            <nav class="menu">
+                <a class="brand" href="index.html" aria-label="Herbs and Fruits Nigeria home">
+                    <span class="brand-mark">
+                        <span class="brand-icon"><i class="fa-solid fa-seedling"></i></span>
+                        <span class="brand-copy">
+                            <span class="brand-title">Herbs and Fruits</span>
+                            <span class="brand-subtitle">Grown in Nigeria</span>
+                        </span>
+                    </span>
+                </a>
+                <button class="menu-toggle" type="button" aria-label="Open navigation" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="menu-list" id="menuList">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="herbs.html">Catalog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-intro">
+                <div class="intro-grid">
+                    <div class="intro-copy">
+                        <span class="eyebrow">Our story</span>
+                        <h1>Built around useful plants, not empty hype.</h1>
+                        <p>Herbs and Fruits Nigeria started from a practical interest in growing plants people actually use: herbs for the kitchen, fruit plants for the garden, and varieties worth recommending with confidence.</p>
+                    </div>
+                    <article class="panel intro-aside">
+                        <span class="eyebrow">What we value</span>
+                        <h2>Clarity, freshness, and straight answers.</h2>
+                        <p>We want the brand to feel warm and local, but also more credible. That means cleaner communication, better product presentation, and easier support.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="story-grid">
+                    <article class="story-card">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                        <h3>Rooted in practical growing</h3>
+                        <p>The catalog is shaped by herbs and fruit plants that fit real cooking, planting, and small-scale growing needs.</p>
+                    </article>
+                    <article class="story-card">
+                        <i class="fa-solid fa-globe-africa"></i>
+                        <h3>Grounded in Nigerian context</h3>
+                        <p>Recommendations are better when they respect local climate, sunlight, and the realities of daily maintenance.</p>
+                    </article>
+                    <article class="story-card">
+                        <i class="fa-solid fa-user-group"></i>
+                        <h3>Designed for direct relationships</h3>
+                        <p>We prefer simple, direct contact. Customers should be able to browse, ask questions, and get accurate responses quickly.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="split-banner">
+                    <div>
+                        <span class="eyebrow">Where this is going</span>
+                        <h2>A sharper brand with better browsing and cleaner trust signals.</h2>
+                        <p>The redesign is not just visual. It gives the business a stronger online presence that feels more current, more intentional, and easier to take seriously.</p>
+                    </div>
+                    <div class="badge-row">
+                        <span class="badge">Clearer catalog</span>
+                        <span class="badge">Better contact flow</span>
+                        <span class="badge">Modern presentation</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="floating-links" aria-label="Social links">
+            <a class="floating-link whatsapp" href="https://wa.me/2347064440604?text=Hello%20Herbs%20and%20Fruits%20Nigeria" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a class="floating-link instagram" href="https://www.instagram.com/herbs_and_fruit/" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <p>&copy; 2025 Herbs and Fruits Nigeria. Fresh herbs, fruit plants, and direct growing support.</p>
+                <div class="footer-nav">
+                    <a href="index.html">Home</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menuList = document.getElementById("menuList");
+            if (menuList) {
+                menuList.classList.toggle("active");
+            }
+        }
+    </script>
+</body>
+</html>
