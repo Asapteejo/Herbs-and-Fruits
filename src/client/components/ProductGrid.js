@@ -10,6 +10,13 @@ const FILTERS = [
   { id: 'fruits', label: 'Fruit plants' },
 ];
 
+const QUICK_FILTERS = [
+  { id: 'all', label: 'Everything' },
+  { id: 'tea', label: 'Tea friendly' },
+  { id: 'kitchen', label: 'Kitchen use' },
+  { id: 'starter', label: 'Beginner picks' },
+];
+
 const normalizeDisplayText = (value) => {
   if (typeof value !== 'string') {
     return '';
@@ -17,14 +24,57 @@ const normalizeDisplayText = (value) => {
 
   return value
     .replace(/([a-z0-9])\-([a-zA-Z])/g, '$1 - $2')
-    .replace(/Nigeria's sun - drought/g, "Nigeria's sun, drought")
+    .replace(/\s-\s/g, ', ')
+    .replace(/Nigeria's sun, drought/g, "Nigeria's sun and dry spells")
+    .replace(/love-it-or-hate-it/g, 'polarizing')
+    .replace(/price update/gi, 'current pricing')
     .replace(/\s{2,}/g, ' ')
     .trim();
 };
 
+const getCollectionSummary = (category) => {
+  if (category === 'herb') {
+    return 'Aromatic, useful, and suited for kitchens, teas, and everyday growing.';
+  }
+
+  return 'Fruit plants selected for home gardens, orchard starters, and productive containers.';
+};
+
+const getQuickTags = (item) => {
+  const source = `${item.description} ${item.benefits} ${item.note}`.toLowerCase();
+  const tags = [];
+
+  if (source.includes('tea') || source.includes('brew') || source.includes('calming')) {
+    tags.push('Tea friendly');
+  }
+
+  if (
+    source.includes('soup') ||
+    source.includes('stew') ||
+    source.includes('salad') ||
+    source.includes('rice') ||
+    source.includes('kitchen')
+  ) {
+    tags.push('Kitchen use');
+  }
+
+  if (
+    source.includes('easy') ||
+    source.includes('beginner') ||
+    source.includes('forgiving') ||
+    source.includes('great for')
+  ) {
+    tags.push('Beginner pick');
+  }
+
+  return tags.slice(0, 2);
+};
+
 const ProductGrid = () => {
-  const [allProducts, setAllProducts] = useState({ herbs: [], fruits: [] });
+  const [allProducts, setAllProducts] = useState([]);
   const [filter, setFilter] = useState('all');
+  const [quickFilter, setQuickFilter] = useState('all');
+  const [query, setQuery] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
   const [photoIndex, setPhotoIndex] = useState(0);
@@ -46,10 +96,22 @@ const ProductGrid = () => {
           return;
         }
 
-        setAllProducts({
-          herbs: data.herbs || [],
-          fruits: data.fruits || [],
-        });
+        const herbs = (data.herbs || []).map((item) => ({
+          ...item,
+          category: 'herb',
+          description: normalizeDisplayText(item.description),
+          benefits: normalizeDisplayText(item.benefits),
+          note: normalizeDisplayText(item.alert),
+        }));
+        const fruits = (data.fruits || []).map((item) => ({
+          ...item,
+          category: 'fruit',
+          description: normalizeDisplayText(item.description),
+          benefits: normalizeDisplayText(item.benefits),
+          note: normalizeDisplayText(item.alert),
+        }));
+
+        setAllProducts([...herbs, ...fruits]);
         setError('');
       })
       .catch((fetchError) => {
@@ -69,33 +131,49 @@ const ProductGrid = () => {
   }, []);
 
   const filteredProducts = useMemo(() => {
+    const normalizedQuery = query.trim().toLowerCase();
+
     if (filter === 'herbs') {
-      return allProducts.herbs;
+      return allProducts
+        .filter((item) => item.category === 'herb')
+        .filter((item) => applyQuickFilter(item, quickFilter))
+        .filter((item) => matchesQuery(item, normalizedQuery));
     }
 
     if (filter === 'fruits') {
-      return allProducts.fruits;
+      return allProducts
+        .filter((item) => item.category === 'fruit')
+        .filter((item) => applyQuickFilter(item, quickFilter))
+        .filter((item) => matchesQuery(item, normalizedQuery));
     }
 
-    return [...allProducts.herbs, ...allProducts.fruits];
-  }, [allProducts, filter]);
+    return allProducts
+      .filter((item) => applyQuickFilter(item, quickFilter))
+      .filter((item) => matchesQuery(item, normalizedQuery));
+  }, [allProducts, filter, quickFilter, query]);
 
   const openLightbox = (index) => {
     setPhotoIndex(index);
     setIsLightboxOpen(true);
   };
 
-  const getCategory = (item) => {
-    return allProducts.herbs.some((herb) => herb.id === item.id) ? 'herb' : 'fruit';
-  };
-
   const getMetaTitle = (item) => {
-    return getCategory(item) === 'herb' ? 'Health benefits' : 'Uses';
+    return item.category === 'herb' ? 'Health benefits' : 'Best use';
   };
 
   const getDisplayPrice = (price) => {
-    return typeof price === 'string' && price.trim() ? price : 'Contact us for current pricing';
+    return typeof price === 'string' && price.trim()
+      ? normalizeDisplayText(price)
+      : 'Contact us for current pricing';
   };
+
+  const totalHerbs = allProducts.filter((item) => item.category === 'herb').length;
+  const totalFruits = allProducts.filter((item) => item.category === 'fruit').length;
+
+  const activeCollectionSummary =
+    filter === 'all'
+      ? 'Browse the full collection, then narrow down by category, use case, or plant name.'
+      : getCollectionSummary(filter === 'herbs' ? 'herb' : 'fruit');
 
   if (loading) {
     return (
@@ -115,6 +193,53 @@ const ProductGrid = () => {
 
   return (
     <div className="catalog-shell">
+      <div className="catalog-toolbar">
+        <div className="catalog-overview">
+          <p className="catalog-kicker">Browse with more control</p>
+          <h2>Find the right plant faster.</h2>
+          <p>{activeCollectionSummary}</p>
+        </div>
+        <div className="catalog-stats" aria-label="Catalog counts">
+          <div className="catalog-stat">
+            <strong>{allProducts.length}</strong>
+            <span>Total listings</span>
+          </div>
+          <div className="catalog-stat">
+            <strong>{totalHerbs}</strong>
+            <span>Herbs</span>
+          </div>
+          <div className="catalog-stat">
+            <strong>{totalFruits}</strong>
+            <span>Fruit plants</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="catalog-controls">
+        <label className="catalog-search">
+          <span className="sr-only">Search products</span>
+          <input
+            type="search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Search by name, use, or benefit"
+          />
+        </label>
+
+        <div className="quick-filter-bar" role="tablist" aria-label="Quick catalog filters">
+          {QUICK_FILTERS.map((option) => (
+            <button
+              key={option.id}
+              type="button"
+              className={quickFilter === option.id ? 'is-active' : ''}
+              onClick={() => setQuickFilter(option.id)}
+            >
+              {option.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
       <div className="filter-bar" role="tablist" aria-label="Catalog filters">
         {FILTERS.map((option) => (
           <button
@@ -130,11 +255,11 @@ const ProductGrid = () => {
 
       <div className="product-grid">
         {filteredProducts.map((item, index) => {
-          const category = getCategory(item);
           const imageSrc = item.image;
+          const quickTags = getQuickTags(item);
 
           return (
-            <article key={`${category}-${item.id}`} className={`product-card ${category}`}>
+            <article key={`${item.category}-${item.id}`} className={`product-card ${item.category}`}>
               <button
                 type="button"
                 className="card-image-button"
@@ -147,16 +272,32 @@ const ProductGrid = () => {
                   className="product-image"
                   loading="lazy"
                 />
-                <span className="product-badge">{category === 'herb' ? 'Herb' : 'Fruit plant'}</span>
+                <span className="product-badge">{item.category === 'herb' ? 'Herb' : 'Fruit plant'}</span>
               </button>
 
               <div className="product-copy">
+                <div className="product-header">
+                  <p className="product-category">{item.category === 'herb' ? 'Herb collection' : 'Fruit collection'}</p>
+                  {quickTags.length > 0 && (
+                    <div className="tag-row">
+                      {quickTags.map((tag) => (
+                        <span key={tag} className="tag-chip">{tag}</span>
+                      ))}
+                    </div>
+                  )}
+                </div>
                 <h3>{item.name}</h3>
-                <p className="product-description">{normalizeDisplayText(item.description)}</p>
+                <p className="product-description">{item.description}</p>
                 <div className="product-meta">
                   <span>{getMetaTitle(item)}</span>
-                  <p>{normalizeDisplayText(item.benefits)}</p>
+                  <p>{item.benefits}</p>
                 </div>
+                {item.note && (
+                  <div className="product-note">
+                    <span>Why it stands out</span>
+                    <p>{item.note}</p>
+                  </div>
+                )}
                 <div className="product-footer">
                   <p className="price">{getDisplayPrice(item.price)}</p>
                   <a
@@ -193,3 +334,45 @@ const ProductGrid = () => {
 };
 
 export default ProductGrid;
+
+function applyQuickFilter(item, quickFilter) {
+  if (quickFilter === 'all') {
+    return true;
+  }
+
+  const source = `${item.description} ${item.benefits} ${item.note}`.toLowerCase();
+
+  if (quickFilter === 'tea') {
+    return source.includes('tea') || source.includes('brew') || source.includes('calming');
+  }
+
+  if (quickFilter === 'kitchen') {
+    return (
+      source.includes('soup') ||
+      source.includes('stew') ||
+      source.includes('salad') ||
+      source.includes('rice') ||
+      source.includes('sauce')
+    );
+  }
+
+  if (quickFilter === 'starter') {
+    return (
+      source.includes('easy') ||
+      source.includes('great for') ||
+      source.includes('perfect for') ||
+      source.includes('forgiving')
+    );
+  }
+
+  return true;
+}
+
+function matchesQuery(item, query) {
+  if (!query) {
+    return true;
+  }
+
+  const haystack = `${item.name} ${item.description} ${item.benefits} ${item.note}`.toLowerCase();
+  return haystack.includes(query);
+}
