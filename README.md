@@ -9,7 +9,7 @@ Primary production path:
 - Firebase Hosting for the frontend
 - Firebase Functions for the `/send-email` contact endpoint
 
-Local Express in [server.js](/c:/Users/HP/Desktop/websites/server.js) is kept as a development fallback so the site and contact flow can still be tested outside Firebase.
+Local Express in [server.js](/c:/Users/HP/Desktop/Herbs-and-Fruits-clean/server.js) is kept as a development fallback so the site and contact flow can still be tested outside Firebase.
 
 ## Scripts
 
@@ -45,7 +45,7 @@ Recommended environment variables:
 
 ## Firebase configuration
 
-The default Firebase project is defined in [.firebaserc](/c:/Users/HP/Desktop/websites/.firebaserc).
+The default Firebase project is defined in `.firebaserc`.
 
 For Firebase Functions email delivery, configure the same values in your deployed runtime before pushing the contact form live.
 
@@ -57,5 +57,5 @@ Example values to set:
 
 ## Notes
 
-- The main catalog UI is mounted from [src/client/index.js](/c:/Users/HP/Desktop/websites/src/client/index.js).
+- The main catalog UI is mounted from [src/client/index.js](/c:/Users/HP/Desktop/Herbs-and-Fruits-clean/src/client/index.js).
 - The contact form posts to `/send-email`, which is handled by Firebase in production and by Express locally.
