@@ -8,6 +8,7 @@
         "watch": "webpack --mode development --watch",
         "start": "node server.js",
         "serve:local": "node server.js",
+        "install:functions": "npm --prefix functions install",
         "deploy": "npm run build && firebase deploy",
         "deploy:hosting": "npm run build && firebase deploy --only hosting",
         "deploy:functions": "firebase deploy --only functions"

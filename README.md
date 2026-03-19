@@ -17,6 +17,8 @@ Local Express in [server.js](/c:/Users/HP/Desktop/Herbs-and-Fruits-clean/server.
   Builds the frontend bundle into `public/js`.
 - `npm run serve:local`
   Runs the local Express fallback server.
+- `npm run install:functions`
+  Installs the Firebase Functions dependencies from the repo root.
 - `npm run deploy`
   Builds the frontend and deploys Hosting + Functions.
 - `npm run deploy:hosting`
@@ -29,7 +31,7 @@ Local Express in [server.js](/c:/Users/HP/Desktop/Herbs-and-Fruits-clean/server.
 1. Install root dependencies:
    `npm install`
 2. Install Firebase Functions dependencies:
-   `cd functions && npm install`
+   `npm run install:functions`
 3. Create a local `.env` file if you want the contact form to send email through the local Express fallback.
 
 Recommended environment variables:
@@ -49,11 +51,21 @@ The default Firebase project is defined in `.firebaserc`.
 
 For Firebase Functions email delivery, configure the same values in your deployed runtime before pushing the contact form live.
 
+Firebase Functions in this repo targets Node `20`. If your local machine is on a newer major version, installs may still work but can show engine warnings.
+
 Example values to set:
 
 - mail.user
 - mail.pass
 - mail.recipient optional
+
+Example Firebase config command:
+
+`firebase functions:config:set mail.user="your@email.com" mail.pass="your-app-password" mail.recipient="herbsandfruits@gmail.com"`
+
+Then deploy with:
+
+`npm run deploy`
 
 ## Notes
 
