@@ -81,6 +81,25 @@ const ProductGrid = () => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const filterParam = params.get('filter');
+    const quickParam = params.get('quick');
+    const queryParam = params.get('query');
+
+    if (filterParam && FILTERS.some((option) => option.id === filterParam)) {
+      setFilter(filterParam);
+    }
+
+    if (quickParam && QUICK_FILTERS.some((option) => option.id === quickParam)) {
+      setQuickFilter(quickParam);
+    }
+
+    if (queryParam) {
+      setQuery(queryParam);
+    }
+  }, []);
+
+  useEffect(() => {
     let isMounted = true;
 
     fetch('/products.json')
@@ -151,6 +170,32 @@ const ProductGrid = () => {
       .filter((item) => applyQuickFilter(item, quickFilter))
       .filter((item) => matchesQuery(item, normalizedQuery));
   }, [allProducts, filter, quickFilter, query]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+
+    if (filter === 'all') {
+      params.delete('filter');
+    } else {
+      params.set('filter', filter);
+    }
+
+    if (quickFilter === 'all') {
+      params.delete('quick');
+    } else {
+      params.set('quick', quickFilter);
+    }
+
+    if (query.trim()) {
+      params.set('query', query.trim());
+    } else {
+      params.delete('query');
+    }
+
+    const nextQuery = params.toString();
+    const nextUrl = `${window.location.pathname}${nextQuery ? `?${nextQuery}` : ''}`;
+    window.history.replaceState({}, '', nextUrl);
+  }, [filter, quickFilter, query]);
 
   const openLightbox = (index) => {
     setPhotoIndex(index);
