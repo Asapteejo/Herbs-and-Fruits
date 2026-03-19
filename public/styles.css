@@ -1,17 +1,17 @@
 :root {
-    --bg: #dfeadf;
-    --surface: rgba(232, 243, 232, 0.88);
-    --surface-strong: #eef7ee;
-    --surface-dark: #1d3a2b;
-    --text: #173122;
-    --muted: #4f6857;
-    --line: rgba(23, 49, 34, 0.12);
-    --leaf: #2f6b45;
-    --leaf-soft: #6f9870;
-    --fruit: #cf7b2d;
-    --fruit-soft: #e7b466;
-    --accent: #8b4a2d;
-    --shadow: 0 24px 60px rgba(29, 58, 43, 0.14);
+    --bg: #cfe0cf;
+    --surface: rgba(214, 232, 214, 0.9);
+    --surface-strong: #e1f0e1;
+    --surface-dark: #183423;
+    --text: #11281a;
+    --muted: #44614d;
+    --line: rgba(17, 40, 26, 0.14);
+    --leaf: #24593a;
+    --leaf-soft: #5f8a63;
+    --fruit: #c9772d;
+    --fruit-soft: #e0ab61;
+    --accent: #7f4329;
+    --shadow: 0 24px 60px rgba(24, 52, 35, 0.16);
     --radius-lg: 32px;
     --radius-md: 20px;
     --radius-sm: 14px;
@@ -30,9 +30,10 @@ body {
     margin: 0;
     color: var(--text);
     background:
-        radial-gradient(circle at top left, rgba(231, 180, 102, 0.2), transparent 28%),
-        radial-gradient(circle at top right, rgba(111, 152, 112, 0.28), transparent 24%),
-        linear-gradient(180deg, #edf5ea 0%, #dfeadb 48%, #e7f1e4 100%);
+        radial-gradient(circle at top left, rgba(224, 171, 97, 0.18), transparent 26%),
+        radial-gradient(circle at top right, rgba(95, 138, 99, 0.34), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(36, 89, 58, 0.12), transparent 30%),
+        linear-gradient(180deg, #d9ead8 0%, #c9ddc8 44%, #dbead9 100%);
     font-family: "Manrope", sans-serif;
     line-height: 1.6;
 }
@@ -72,7 +73,7 @@ textarea {
     left: -100px;
     width: 340px;
     height: 340px;
-    background: rgba(95, 138, 99, 0.18);
+    background: rgba(95, 138, 99, 0.24);
 }
 
 .page-shell::after {
@@ -80,7 +81,7 @@ textarea {
     bottom: 10vh;
     width: 300px;
     height: 300px;
-    background: rgba(217, 122, 50, 0.18);
+    background: rgba(201, 119, 45, 0.16);
 }
 
 .leaf-background {
@@ -88,11 +89,11 @@ textarea {
     inset: 0;
     pointer-events: none;
     z-index: -1;
-    opacity: 0.45;
+    opacity: 0.58;
     background-image:
-        radial-gradient(circle at 20% 20%, rgba(45, 91, 67, 0.08) 0, rgba(45, 91, 67, 0.08) 3px, transparent 3px),
-        radial-gradient(circle at 80% 30%, rgba(217, 122, 50, 0.08) 0, rgba(217, 122, 50, 0.08) 4px, transparent 4px),
-        radial-gradient(circle at 60% 72%, rgba(165, 63, 43, 0.08) 0, rgba(165, 63, 43, 0.08) 3px, transparent 3px);
+        radial-gradient(circle at 20% 20%, rgba(36, 89, 58, 0.1) 0, rgba(36, 89, 58, 0.1) 3px, transparent 3px),
+        radial-gradient(circle at 80% 30%, rgba(201, 119, 45, 0.08) 0, rgba(201, 119, 45, 0.08) 4px, transparent 4px),
+        radial-gradient(circle at 60% 72%, rgba(95, 138, 99, 0.1) 0, rgba(95, 138, 99, 0.1) 3px, transparent 3px);
     background-size: 220px 220px;
 }
 
@@ -101,8 +102,8 @@ textarea {
     top: 0;
     z-index: 20;
     backdrop-filter: blur(18px);
-    background: rgba(228, 240, 228, 0.82);
-    border-bottom: 1px solid rgba(23, 49, 34, 0.08);
+    background: rgba(206, 225, 206, 0.84);
+    border-bottom: 1px solid rgba(17, 40, 26, 0.1);
 }
 
 .menu {
@@ -125,9 +126,9 @@ textarea {
     gap: 10px;
     padding: 12px 16px;
     border-radius: 999px;
-    background: rgba(255, 250, 241, 0.9);
-    border: 1px solid rgba(24, 38, 29, 0.08);
-    box-shadow: 0 10px 30px rgba(31, 59, 47, 0.08);
+    background: rgba(228, 241, 228, 0.92);
+    border: 1px solid rgba(17, 40, 26, 0.08);
+    box-shadow: 0 10px 30px rgba(24, 52, 35, 0.1);
 }
 
 .brand-icon {
