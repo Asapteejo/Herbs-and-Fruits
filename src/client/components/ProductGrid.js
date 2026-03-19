@@ -40,6 +40,34 @@ const getCollectionSummary = (category) => {
   return 'Fruit plants selected for home gardens, orchard starters, and productive containers.';
 };
 
+const getActiveBrowseLabel = ({ filter, quickFilter, query }) => {
+  if (query) {
+    return `Showing results for "${query}"`;
+  }
+
+  if (quickFilter === 'tea') {
+    return 'Showing tea-friendly picks';
+  }
+
+  if (quickFilter === 'kitchen') {
+    return 'Showing kitchen-use picks';
+  }
+
+  if (quickFilter === 'starter') {
+    return 'Showing beginner-friendly picks';
+  }
+
+  if (filter === 'herbs') {
+    return 'Showing herb listings';
+  }
+
+  if (filter === 'fruits') {
+    return 'Showing fruit plant listings';
+  }
+
+  return '';
+};
+
 const getQuickTags = (item) => {
   const source = `${item.description} ${item.benefits} ${item.note}`.toLowerCase();
   const tags = [];
@@ -171,6 +199,12 @@ const ProductGrid = () => {
       .filter((item) => matchesQuery(item, normalizedQuery));
   }, [allProducts, filter, quickFilter, query]);
 
+  const activeBrowseLabel = getActiveBrowseLabel({
+    filter,
+    quickFilter,
+    query: query.trim(),
+  });
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
 
@@ -243,6 +277,7 @@ const ProductGrid = () => {
           <p className="catalog-kicker">Browse with more control</p>
           <h2>Find the right plant faster.</h2>
           <p>{activeCollectionSummary}</p>
+          {activeBrowseLabel ? <p className="catalog-active-label">{activeBrowseLabel}</p> : null}
         </div>
         <div className="catalog-stats" aria-label="Catalog counts">
           <div className="catalog-stat">
