@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin Dashboard | Herbs and Fruits</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --admin-bg: #0f1b15;
+            --admin-surface: rgba(255, 250, 241, 0.92);
+            --admin-surface-strong: #fffdf8;
+            --admin-panel: rgba(17, 29, 23, 0.88);
+            --admin-panel-soft: rgba(24, 41, 32, 0.72);
+            --admin-text: #14231b;
+            --admin-text-soft: #637265;
+            --admin-light: #edf2e7;
+            --admin-line: rgba(255, 255, 255, 0.08);
+            --admin-leaf: #3d7a58;
+            --admin-fruit: #d97a32;
+            --admin-accent: #f0b061;
+            --admin-danger: #bf5d47;
+            --admin-shadow: 0 30px 80px rgba(0, 0, 0, 0.24);
+            --admin-radius-lg: 28px;
+            --admin-radius-md: 18px;
+            --admin-radius-sm: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            color: var(--admin-light);
+            background:
+                radial-gradient(circle at top left, rgba(217, 122, 50, 0.24), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(61, 122, 88, 0.22), transparent 24%),
+                linear-gradient(180deg, #0e1713 0%, #122018 46%, #16251e 100%);
+            font-family: "Manrope", sans-serif;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        .admin-shell {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 32px 20px 48px;
+        }
+
+        .admin-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 28px;
+        }
+
+        .brand-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            padding: 12px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--admin-line);
+        }
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            background: linear-gradient(135deg, var(--admin-leaf), var(--admin-fruit));
+            font-size: 1rem;
+        }
+
+        .brand-copy {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.05;
+        }
+
+        .brand-copy strong {
+            font-family: "Fraunces", serif;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .brand-copy span {
+            color: rgba(237, 242, 231, 0.74);
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+            padding: 0 16px;
+            border-radius: 999px;
+            border: 1px solid var(--admin-line);
+            background: rgba(255, 255, 255, 0.06);
+            color: rgba(237, 242, 231, 0.9);
+            font-size: 0.92rem;
+        }
+
+        .hero-card {
+            display: grid;
+            grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+            gap: 24px;
+            padding: 28px;
+            border-radius: var(--admin-radius-lg);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+            border: 1px solid var(--admin-line);
+            box-shadow: var(--admin-shadow);
+            margin-bottom: 24px;
+        }
+
+        .hero-copy h1 {
+            margin: 14px 0 12px;
+            font-family: "Fraunces", serif;
+            font-size: clamp(2rem, 4vw, 3.35rem);
+            line-height: 1;
+        }
+
+        .hero-copy p {
+            margin: 0;
+            max-width: 58ch;
+            color: rgba(237, 242, 231, 0.8);
+            font-size: 1.02rem;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            min-height: 38px;
+            padding: 0 14px;
+            border-radius: 999px;
+            background: rgba(240, 176, 97, 0.12);
+            color: var(--admin-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 800;
+            font-size: 0.76rem;
+        }
+
+        .hero-notes {
+            display: grid;
+            gap: 14px;
+        }
+
+        .hero-note,
+        .stat-card,
+        .session-panel,
+        .thread-panel,
+        .composer-panel {
+            border-radius: var(--admin-radius-md);
+            border: 1px solid var(--admin-line);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .hero-note {
+            padding: 18px;
+        }
+
+        .hero-note strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .hero-note p {
+            margin: 0;
+            color: rgba(237, 242, 231, 0.72);
+            font-size: 0.92rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            padding: 18px;
+        }
+
+        .stat-label {
+            color: rgba(237, 242, 231, 0.68);
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .stat-value {
+            margin-top: 8px;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 360px minmax(0, 1fr);
+            gap: 20px;
+        }
+
+        .session-panel,
+        .thread-panel,
+        .composer-panel {
+            overflow: hidden;
+        }
+
+        .panel-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 18px 20px;
+            border-bottom: 1px solid var(--admin-line);
+        }
+
+        .panel-heading h2,
+        .panel-heading h3 {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .panel-heading span {
+            color: rgba(237, 242, 231, 0.64);
+            font-size: 0.85rem;
+        }
+
+        .session-toolbar,
+        .composer-body {
+            padding: 18px 20px;
+        }
+
+        .field {
+            width: 100%;
+            min-height: 52px;
+            padding: 0 16px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            outline: none;
+        }
+
+        .field::placeholder {
+            color: rgba(237, 242, 231, 0.48);
+        }
+
+        select.field option {
+            color: #101813;
+        }
+
+        textarea.field {
+            min-height: 132px;
+            padding: 14px 16px;
+            resize: vertical;
+        }
+
+        .session-list {
+            max-height: 640px;
+            overflow: auto;
+            padding: 0 12px 12px;
+        }
+
+        .session-button {
+            width: 100%;
+            text-align: left;
+            margin-top: 10px;
+            padding: 16px;
+            border: 1px solid transparent;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            color: inherit;
+            cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .session-button:hover,
+        .session-button:focus {
+            transform: translateY(-1px);
+            border-color: rgba(240, 176, 97, 0.32);
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .session-button.is-active {
+            border-color: rgba(240, 176, 97, 0.46);
+            background: rgba(217, 122, 50, 0.12);
+        }
+
+        .session-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .session-id {
+            font-weight: 700;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .session-time,
+        .session-meta,
+        .empty-state p,
+        .thread-status {
+            color: rgba(237, 242, 231, 0.62);
+            font-size: 0.88rem;
+        }
+
+        .session-preview {
+            color: rgba(237, 242, 231, 0.78);
+            font-size: 0.92rem;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .thread-layout {
+            display: grid;
+            grid-template-rows: minmax(420px, 1fr) auto;
+            gap: 20px;
+        }
+
+        .thread-body {
+            padding: 18px 20px 8px;
+            max-height: 680px;
+            overflow: auto;
+        }
+
+        .message-card {
+            margin-bottom: 16px;
+            padding: 18px;
+            border-radius: 18px;
+            background: var(--admin-surface);
+            color: var(--admin-text);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+        }
+
+        .message-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .message-role {
+            display: inline-flex;
+            align-items: center;
+            min-height: 32px;
+            padding: 0 12px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #fff;
+            background: linear-gradient(135deg, var(--admin-leaf), var(--admin-fruit));
+        }
+
+        .message-time {
+            color: var(--admin-text-soft);
+            font-size: 0.84rem;
+        }
+
+        .message-grid {
+            display: grid;
+            gap: 14px;
+        }
+
+        .bubble {
+            padding: 14px 16px;
+            border-radius: 16px;
+        }
+
+        .bubble strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.88rem;
+        }
+
+        .bubble p {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+
+        .bubble.user {
+            background: rgba(61, 122, 88, 0.1);
+        }
+
+        .bubble.reply {
+            background: rgba(217, 122, 50, 0.1);
+        }
+
+        .thread-status {
+            padding: 0 20px 18px;
+        }
+
+        .composer-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            margin-top: 14px;
+        }
+
+        .hint {
+            color: rgba(237, 242, 231, 0.62);
+            font-size: 0.84rem;
+        }
+
+        .primary-button {
+            border: 0;
+            min-height: 50px;
+            padding: 0 18px;
+            border-radius: 14px;
+            cursor: pointer;
+            color: #fff;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--admin-fruit), var(--admin-leaf));
+        }
+
+        .primary-button[disabled] {
+            opacity: 0.55;
+            cursor: not-allowed;
+        }
+
+        .empty-state {
+            padding: 28px 20px;
+            text-align: center;
+        }
+
+        .empty-state h3 {
+            margin: 0 0 10px;
+            font-family: "Fraunces", serif;
+            font-size: 1.5rem;
+        }
+
+        .empty-state p {
+            margin: 0;
+        }
+
+        @media (max-width: 1100px) {
+            .hero-card,
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 720px) {
+            .admin-shell {
+                padding: 20px 14px 32px;
+            }
+
+            .admin-topbar,
+            .composer-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-shell">
+        <header class="admin-topbar">
+            <a class="brand-link" href="/index.html">
+                <span class="brand-icon">HF</span>
+                <span class="brand-copy">
+                    <strong>Herbs and Fruits</strong>
+                    <span>Admin Console</span>
+                </span>
+            </a>
+            <div class="status-pill" id="connectionStatus">Connecting to chat database...</div>
+        </header>
+
+        <section class="hero-card">
+            <div class="hero-copy">
+                <span class="eyebrow">Support workspace</span>
+                <h1>Review conversations and reply from one control panel.</h1>
+                <p>Monitor active customer sessions, inspect the latest automated replies, and send owner follow-up responses directly into the shared chat thread.</p>
+            </div>
+            <div class="hero-notes">
+                <div class="hero-note">
+                    <strong>Realtime feed</strong>
+                    <p>The dashboard listens to the Realtime Database `chats` collection and groups messages by `sessionId`.</p>
+                </div>
+                <div class="hero-note">
+                    <strong>Owner override</strong>
+                    <p>Sending a response updates the latest chat item in the selected session with `ownerResponse` and `ownerTimestamp`.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <div class="stat-label">Sessions</div>
+                <div class="stat-value" id="sessionCount">0</div>
+            </article>
+            <article class="stat-card">
+                <div class="stat-label">Messages</div>
+                <div class="stat-value" id="messageCount">0</div>
+            </article>
+            <article class="stat-card">
+                <div class="stat-label">Owner Replies</div>
+                <div class="stat-value" id="replyCount">0</div>
+            </article>
+            <article class="stat-card">
+                <div class="stat-label">Selected Session</div>
+                <div class="stat-value" id="selectedSessionLabel">None</div>
+            </article>
+        </section>
+
+        <section class="dashboard-grid">
+            <aside class="session-panel">
+                <div class="panel-heading">
+                    <h2>Sessions</h2>
+                    <span id="sessionSummary">0 available</span>
+                </div>
+                <div class="session-toolbar">
+                    <input class="field" type="search" id="sessionSearch" placeholder="Search by session id or message text">
+                </div>
+                <div class="session-list" id="sessionList"></div>
+            </aside>
+
+            <div class="thread-layout">
+                <section class="thread-panel">
+                    <div class="panel-heading">
+                        <h3>Conversation</h3>
+                        <span id="threadSessionId">No session selected</span>
+                    </div>
+                    <div class="thread-body" id="threadBody">
+                        <div class="empty-state">
+                            <h3>No session selected</h3>
+                            <p>Choose a session from the left panel to inspect its conversation history.</p>
+                        </div>
+                    </div>
+                    <div class="thread-status" id="threadStatus">Waiting for chat data...</div>
+                </section>
+
+                <section class="composer-panel">
+                    <div class="panel-heading">
+                        <h3>Owner Response</h3>
+                        <span>Write back into the selected thread</span>
+                    </div>
+                    <div class="composer-body">
+                        <label for="adminResponse" class="hint">Response</label>
+                        <textarea class="field" id="adminResponse" placeholder="Type your reply to the selected customer session"></textarea>
+                        <div class="composer-actions">
+                            <div class="hint" id="composerHint">Select a session before sending a reply.</div>
+                            <button class="primary-button" id="sendResponseButton" type="button" disabled>Send response</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getDatabase, onValue, query, ref, orderByChild, equalTo, get, update } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBxjfonHAdfX-5sbhaOUkmr24OR-yiNdBs",
+            authDomain: "herbsandfruits-c600a.firebaseapp.com",
+            databaseURL: "https://herbsandfruits-c600a-default-rtdb.firebaseio.com",
+            projectId: "herbsandfruits-c600a",
+            storageBucket: "herbsandfruits-c600a.appspot.com",
+            messagingSenderId: "113855153511",
+            appId: "1:113855153511:web:b7e6994094d6133a6b5bc2"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        const connectionStatus = document.getElementById("connectionStatus");
+        const sessionCount = document.getElementById("sessionCount");
+        const messageCount = document.getElementById("messageCount");
+        const replyCount = document.getElementById("replyCount");
+        const selectedSessionLabel = document.getElementById("selectedSessionLabel");
+        const sessionSummary = document.getElementById("sessionSummary");
+        const sessionSearch = document.getElementById("sessionSearch");
+        const sessionList = document.getElementById("sessionList");
+        const threadBody = document.getElementById("threadBody");
+        const threadStatus = document.getElementById("threadStatus");
+        const threadSessionId = document.getElementById("threadSessionId");
+        const adminResponse = document.getElementById("adminResponse");
+        const sendResponseButton = document.getElementById("sendResponseButton");
+        const composerHint = document.getElementById("composerHint");
+
+        let selectedSessionId = "";
+        let chatEntries = [];
+        let sessionMap = new Map();
+
+        const formatDate = (value) => {
+            if (!value) return "Unknown time";
+            const date = new Date(value);
+            if (Number.isNaN(date.getTime())) return "Unknown time";
+            return date.toLocaleString();
+        };
+
+        const escapeHtml = (value = "") =>
+            String(value)
+                .replaceAll("&", "&amp;")
+                .replaceAll("<", "&lt;")
+                .replaceAll(">", "&gt;")
+                .replaceAll('"', "&quot;")
+                .replaceAll("'", "&#39;");
+
+        const normalizeSessions = (entries) => {
+            const sessions = new Map();
+
+            entries.forEach((entry) => {
+                const sessionId = entry.sessionId || "unknown-session";
+                const current = sessions.get(sessionId) || {
+                    sessionId,
+                    items: [],
+                    latestTimestamp: 0,
+                    preview: ""
+                };
+
+                current.items.push(entry);
+
+                const eventTime = new Date(entry.timestamp || entry.ownerTimestamp || 0).getTime() || 0;
+                if (eventTime >= current.latestTimestamp) {
+                    current.latestTimestamp = eventTime;
+                    current.preview = entry.userMessage || entry.ownerResponse || entry.botResponse || "No preview available";
+                }
+
+                sessions.set(sessionId, current);
+            });
+
+            return new Map(
+                [...sessions.entries()].sort((a, b) => b[1].latestTimestamp - a[1].latestTimestamp)
+            );
+        };
+
+        const updateStats = () => {
+            sessionCount.textContent = String(sessionMap.size);
+            messageCount.textContent = String(chatEntries.length);
+            replyCount.textContent = String(chatEntries.filter((entry) => entry.ownerResponse).length);
+            selectedSessionLabel.textContent = selectedSessionId || "None";
+            sessionSummary.textContent = `${sessionMap.size} available`;
+        };
+
+        const renderSessions = () => {
+            const searchValue = sessionSearch.value.trim().toLowerCase();
+            const sessions = [...sessionMap.values()].filter((session) => {
+                if (!searchValue) return true;
+
+                const haystack = [
+                    session.sessionId,
+                    session.preview,
+                    ...session.items.map((item) => `${item.userMessage || ""} ${item.ownerResponse || ""} ${item.botResponse || ""}`)
+                ]
+                    .join(" ")
+                    .toLowerCase();
+
+                return haystack.includes(searchValue);
+            });
+
+            if (!sessions.length) {
+                sessionList.innerHTML = `
+                    <div class="empty-state">
+                        <h3>No matching sessions</h3>
+                        <p>Try a different search term or wait for new chat activity.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            sessionList.innerHTML = sessions
+                .map((session) => {
+                    const lastMessage = session.items[session.items.length - 1] || {};
+                    return `
+                        <button class="session-button ${session.sessionId === selectedSessionId ? "is-active" : ""}" type="button" data-session-id="${escapeHtml(session.sessionId)}">
+                            <div class="session-row">
+                                <div class="session-id">${escapeHtml(session.sessionId)}</div>
+                                <div class="session-time">${escapeHtml(formatDate(session.latestTimestamp))}</div>
+                            </div>
+                            <div class="session-preview">${escapeHtml(session.preview)}</div>
+                            <div class="session-meta">${lastMessage.ownerResponse ? "Owner reply sent" : "Awaiting owner reply"}</div>
+                        </button>
+                    `;
+                })
+                .join("");
+
+            sessionList.querySelectorAll("[data-session-id]").forEach((button) => {
+                button.addEventListener("click", () => {
+                    selectedSessionId = button.getAttribute("data-session-id") || "";
+                    renderSessions();
+                    renderThread();
+                    updateStats();
+                });
+            });
+        };
+
+        const renderThread = () => {
+            const session = sessionMap.get(selectedSessionId);
+
+            if (!session) {
+                threadSessionId.textContent = "No session selected";
+                threadStatus.textContent = "Waiting for chat data...";
+                composerHint.textContent = "Select a session before sending a reply.";
+                sendResponseButton.disabled = true;
+                threadBody.innerHTML = `
+                    <div class="empty-state">
+                        <h3>No session selected</h3>
+                        <p>Choose a session from the left panel to inspect its conversation history.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            threadSessionId.textContent = session.sessionId;
+            threadStatus.textContent = `${session.items.length} message record${session.items.length === 1 ? "" : "s"} in this session.`;
+            composerHint.textContent = "Your reply will update the latest chat record in this session.";
+            sendResponseButton.disabled = false;
+
+            threadBody.innerHTML = session.items
+                .map((item) => `
+                    <article class="message-card">
+                        <div class="message-head">
+                            <span class="message-role">${item.ownerResponse ? "Owner reply available" : "Bot handled"}</span>
+                            <span class="message-time">${escapeHtml(formatDate(item.timestamp))}</span>
+                        </div>
+                        <div class="message-grid">
+                            <div class="bubble user">
+                                <strong>Customer message</strong>
+                                <p>${escapeHtml(item.userMessage || "No user message recorded.")}</p>
+                            </div>
+                            <div class="bubble reply">
+                                <strong>${item.ownerResponse ? "Owner response" : "Automated response"}</strong>
+                                <p>${escapeHtml(item.ownerResponse || item.botResponse || "No response recorded.")}</p>
+                            </div>
+                        </div>
+                    </article>
+                `)
+                .join("");
+        };
+
+        const loadSessions = () => {
+            connectionStatus.textContent = "Listening for live chat updates...";
+
+            onValue(
+                ref(db, "chats"),
+                (snapshot) => {
+                    const rawChats = snapshot.val() || {};
+                    chatEntries = Object.entries(rawChats).map(([id, value]) => ({
+                        id,
+                        ...value
+                    }));
+
+                    sessionMap = normalizeSessions(chatEntries);
+
+                    if (!selectedSessionId || !sessionMap.has(selectedSessionId)) {
+                        selectedSessionId = sessionMap.size ? sessionMap.keys().next().value : "";
+                    }
+
+                    updateStats();
+                    renderSessions();
+                    renderThread();
+
+                    connectionStatus.textContent = `Connected to chat database. ${chatEntries.length} message record${chatEntries.length === 1 ? "" : "s"} loaded.`;
+                },
+                (error) => {
+                    console.error("Failed to load chats:", error);
+                    connectionStatus.textContent = "Failed to load chat data. Check Firebase rules and browser console.";
+                    threadStatus.textContent = "Realtime chat feed is unavailable.";
+                }
+            );
+        };
+
+        const sendAdminResponse = async () => {
+            const response = adminResponse.value.trim();
+
+            if (!selectedSessionId || !response) {
+                composerHint.textContent = "Pick a session and type a response before sending.";
+                return;
+            }
+
+            sendResponseButton.disabled = true;
+            composerHint.textContent = "Sending owner response...";
+
+            try {
+                const chatsBySession = query(ref(db, "chats"), orderByChild("sessionId"), equalTo(selectedSessionId));
+                const snapshot = await get(chatsBySession);
+                const chats = snapshot.val();
+
+                if (!chats) {
+                    throw new Error("No chat records found for the selected session.");
+                }
+
+                const latestEntry = Object.entries(chats)
+                    .map(([id, value]) => ({
+                        id,
+                        timestamp: new Date(value.timestamp || value.ownerTimestamp || 0).getTime() || 0
+                    }))
+                    .sort((a, b) => a.timestamp - b.timestamp)
+                    .pop();
+
+                if (!latestEntry) {
+                    throw new Error("Unable to determine the latest chat entry.");
+                }
+
+                await update(ref(db, `chats/${latestEntry.id}`), {
+                    ownerResponse: response,
+                    ownerTimestamp: new Date().toISOString()
+                });
+
+                adminResponse.value = "";
+                composerHint.textContent = "Owner response sent successfully.";
+            } catch (error) {
+                console.error("Failed to send owner response:", error);
+                composerHint.textContent = "Sending failed. Check database permissions and session data.";
+            } finally {
+                sendResponseButton.disabled = !selectedSessionId;
+            }
+        };
+
+        sessionSearch.addEventListener("input", renderSessions);
+        sendResponseButton.addEventListener("click", sendAdminResponse);
+
+        loadSessions();
+    </script>
+</body>
+</html>
