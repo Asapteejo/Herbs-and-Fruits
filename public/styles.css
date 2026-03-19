@@ -121,6 +121,73 @@ textarea {
     background-size: 220px 220px;
 }
 
+.falling-leaves {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.falling-leaf {
+    position: absolute;
+    top: -12vh;
+    width: var(--leaf-size, 18px);
+    height: calc(var(--leaf-size, 18px) * 0.68);
+    left: var(--leaf-left, 10%);
+    opacity: var(--leaf-opacity, 0.22);
+    border-radius: 0 100% 0 100%;
+    background: linear-gradient(135deg, rgba(36, 89, 58, 0.78), rgba(201, 119, 45, 0.62));
+    box-shadow: 0 4px 10px rgba(24, 52, 35, 0.12);
+    transform: rotate(var(--leaf-rotate, 0deg));
+    animation:
+        leaf-fall var(--leaf-duration, 18s) linear infinite,
+        leaf-sway var(--leaf-sway-duration, 5s) ease-in-out infinite;
+    animation-delay: var(--leaf-delay, 0s);
+}
+
+.falling-leaf::after {
+    content: "";
+    position: absolute;
+    inset: 10% 44% 8% 44%;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+    transform: rotate(22deg);
+}
+
+html[data-theme="dark"] .falling-leaf {
+    opacity: var(--leaf-opacity-dark, 0.16);
+    background: linear-gradient(135deg, rgba(123, 187, 134, 0.62), rgba(229, 163, 95, 0.46));
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+@keyframes leaf-fall {
+    0% {
+        transform: translate3d(0, -12vh, 0) rotate(var(--leaf-rotate, 0deg));
+    }
+
+    100% {
+        transform: translate3d(var(--leaf-drift, 30px), 118vh, 0) rotate(calc(var(--leaf-rotate, 0deg) + 140deg));
+    }
+}
+
+@keyframes leaf-sway {
+    0%,
+    100% {
+        margin-left: -10px;
+    }
+
+    50% {
+        margin-left: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .falling-leaves {
+        display: none;
+    }
+}
+
 .site-header {
     position: sticky;
     top: 0;

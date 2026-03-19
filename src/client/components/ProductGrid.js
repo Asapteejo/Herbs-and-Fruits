@@ -27,64 +27,6 @@ const BROWSE_ROUTE_LABELS = {
   container: 'Showing container-friendly picks',
 };
 
-const TAG_MAP = {
-  herb: {
-    'Rosemary White': ['kitchen', 'tea', 'gifting'],
-    'Rosemary Green': ['kitchen', 'tea', 'container'],
-    Stevia: ['tea', 'container'],
-    'Lipia Alba': ['tea', 'container'],
-    'Garlic Chives': ['kitchen', 'container'],
-    'Onion Chives': ['kitchen', 'container'],
-    'Holy Basil': ['tea', 'container'],
-    'Lemon Basil': ['kitchen', 'container'],
-    'Purple Basil': ['kitchen', 'gifting'],
-    Peppermint: ['tea', 'container'],
-    'Chocolate Mint': ['tea', 'gifting', 'container'],
-    'Apple Mint': ['tea', 'gifting', 'container'],
-    Thyme: ['kitchen', 'tea', 'container'],
-    Parsley: ['kitchen', 'container'],
-    Cilantro: ['kitchen', 'container'],
-    Oregano: ['kitchen', 'tea', 'container'],
-    Dill: ['kitchen', 'container'],
-    Sage: ['kitchen', 'tea', 'gifting'],
-    Chives: ['kitchen', 'container'],
-    Tarragon: ['kitchen', 'gifting'],
-    Lavender: ['tea', 'gifting', 'container'],
-    'Cherry Tomatoes': ['kitchen', 'container', 'fruiting'],
-    'Curry Leaf': ['kitchen', 'container'],
-    'Lemon Balm': ['tea', 'container'],
-    Fennel: ['kitchen', 'tea', 'container'],
-    Jasmine: ['tea', 'gifting', 'container'],
-    Marjoram: ['kitchen', 'tea', 'container'],
-  },
-  fruit: {
-    'Pineapple Mint': ['tea', 'gifting', 'container'],
-    'Mayer Lemon': ['citrus', 'fruiting', 'container'],
-    Lemon: ['citrus', 'fruiting', 'container'],
-    'Pink Lemon': ['citrus', 'fruiting', 'gifting', 'container'],
-    Lime: ['citrus', 'fruiting', 'container'],
-    Orange: ['citrus', 'fruiting', 'tree'],
-    'Valencia Orange': ['citrus', 'fruiting', 'tree'],
-    Kumquat: ['citrus', 'fruiting', 'gifting', 'container'],
-    'Mandarin Orange': ['citrus', 'fruiting', 'tree'],
-    Mulberry: ['fruiting', 'tree'],
-    Pomegranate: ['fruiting', 'tree', 'gifting', 'container'],
-    Guava: ['fruiting', 'tree'],
-    Soursop: ['fruiting', 'tree'],
-    'Custard Apple': ['fruiting', 'tree', 'gifting'],
-    'Sugar Apple': ['fruiting', 'tree', 'gifting'],
-    Cherries: ['fruiting', 'gifting'],
-    Plum: ['fruiting', 'tree'],
-    'Yellow Plum': ['fruiting', 'tree', 'gifting'],
-    Peach: ['fruiting', 'tree'],
-    Apricot: ['fruiting', 'gifting'],
-    Grapes: ['fruiting', 'container'],
-    'Seeded Grapes': ['fruiting', 'container'],
-    'Seedless Grapes': ['fruiting', 'container', 'gifting'],
-    Banana: ['fruiting', 'container'],
-  },
-};
-
 const normalizeDisplayText = (value) => {
   if (typeof value !== 'string') {
     return '';
@@ -108,7 +50,7 @@ const getCollectionSummary = (category) => {
   return 'Fruit plants selected for home gardens, orchard starters, and productive containers.';
 };
 
-const getRouteTags = (item) => TAG_MAP[item.category]?.[item.name] || [];
+const getRouteTags = (item) => Array.isArray(item.tags) ? item.tags : [];
 
 const getActiveBrowseLabel = ({ filter, quickFilter, query }) => {
   if (query) {

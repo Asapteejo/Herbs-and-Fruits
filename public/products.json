@@ -8,7 +8,12 @@
       "benefits": "Boosts memory with its antioxidants perfect for Nigeria's stews or as a tea to sharpen your mind!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Rosemary's tough enough to handle Nigeria's sun and dry spells while still looking great!"
+      "alert": "Rosemary's tough enough to handle Nigeria's sun and dry spells while still looking great!",
+      "tags": [
+        "kitchen",
+        "tea",
+        "gifting"
+      ]
     },
     {
       "id": 2,
@@ -18,7 +23,12 @@
       "benefits": "Improves focus and fights inflammation, add to pepper soup or brew as tea for a brainy lift!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Rosemary was worn by Greek scholars to boost memory, study smarter!"
+      "alert": "Rosemary was worn by Greek scholars to boost memory, study smarter!",
+      "tags": [
+        "kitchen",
+        "tea",
+        "container"
+      ]
     },
     {
       "id": 3,
@@ -28,7 +38,11 @@
       "benefits": "Sweetens without sugar spikes, perfect for diabetics or a guilt-free zobo sip!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Stevia's 300 times sweeter than sugar, talk about a sweet deal!"
+      "alert": "Stevia's 300 times sweeter than sugar, talk about a sweet deal!",
+      "tags": [
+        "tea",
+        "container"
+      ]
     },
     {
       "id": 4,
@@ -38,7 +52,11 @@
       "benefits": "Eases stress and aids digestion, brew it after a long day in Lagos traffic!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Lipia Alba's camphor-like scent is a natural relaxant, chill out!"
+      "alert": "Lipia Alba's camphor-like scent is a natural relaxant, chill out!",
+      "tags": [
+        "tea",
+        "container"
+      ]
     },
     {
       "id": 5,
@@ -48,7 +66,11 @@
       "benefits": "Chop into soups or sprinkle on rice, adds a garlicky kick without the bite!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Garlic chives have been flavoring dishes for 4,000 years, timeless taste!"
+      "alert": "Garlic chives have been flavoring dishes for 4,000 years, timeless taste!",
+      "tags": [
+        "kitchen",
+        "container"
+      ]
     },
     {
       "id": 6,
@@ -58,7 +80,11 @@
       "benefits": "Snip over pepper soup or mix into salads for a subtle onion zing, fresh and easy!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Romans used onion chives for sunburn relief, multitasking greens!"
+      "alert": "Romans used onion chives for sunburn relief, multitasking greens!",
+      "tags": [
+        "kitchen",
+        "container"
+      ]
     },
     {
       "id": 7,
@@ -68,7 +94,11 @@
       "benefits": "Reduces stress and boosts immunity, sip it as tea for a holy health kick!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Holy Basil's revered in India as Tulsi, temple-worthy wellness!"
+      "alert": "Holy Basil's revered in India as Tulsi, temple-worthy wellness!",
+      "tags": [
+        "tea",
+        "container"
+      ]
     },
     {
       "id": 8,
@@ -78,7 +108,11 @@
       "benefits": "Toss into soups or blend with peppers, citrus vibes meet spicy flair!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Lemon Basil's citral content mimics lemongrass, zesty twins!"
+      "alert": "Lemon Basil's citral content mimics lemongrass, zesty twins!",
+      "tags": [
+        "kitchen",
+        "container"
+      ]
     },
     {
       "id": 9,
@@ -88,7 +122,11 @@
       "benefits": "Stir into egusi or garnish rice, its color pops and flavor rocks!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Purple Basil's anthocyanins shield it from UV-nature's sunglasses!"
+      "alert": "Purple Basil's anthocyanins shield it from UV-nature's sunglasses!",
+      "tags": [
+        "kitchen",
+        "gifting"
+      ]
     },
     {
       "id": 10,
@@ -98,7 +136,11 @@
       "benefits": "Soothes digestion and clears sinuses, brew it or chew it for a minty boost!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Peppermint's menthol is a natural decongestant, breathe easy!"
+      "alert": "Peppermint's menthol is a natural decongestant, breathe easy!",
+      "tags": [
+        "tea",
+        "container"
+      ]
     },
     {
       "id": 11,
@@ -108,7 +150,12 @@
       "benefits": "Blend into kunu or desserts, chocolate vibes without the calories!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Chocolate Mint's a hybrid, wild mint meets cocoa dreams!"
+      "alert": "Chocolate Mint's a hybrid, wild mint meets cocoa dreams!",
+      "tags": [
+        "tea",
+        "gifting",
+        "container"
+      ]
     },
     {
       "id": 12,
@@ -118,7 +165,12 @@
       "benefits": "Mix into zobo or garnish fruits, its fuzzy leaves bring orchard freshness!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Apple Mint's fuzzy leaves smell like an apple party, fruity fun!"
+      "alert": "Apple Mint's fuzzy leaves smell like an apple party, fruity fun!",
+      "tags": [
+        "tea",
+        "gifting",
+        "container"
+      ]
     },
     {
       "id": 13,
@@ -128,7 +180,12 @@
       "benefits": "Antiseptic and flavorful, add to soups or gargle as a throat, soothing tea!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Thyme's thymol is in mouthwash, germ, killing flavor king!"
+      "alert": "Thyme's thymol is in mouthwash, germ, killing flavor king!",
+      "tags": [
+        "kitchen",
+        "tea",
+        "container"
+      ]
     },
     {
       "id": 14,
@@ -138,7 +195,11 @@
       "benefits": "Loaded with vitamins A, C, K-chop into soups or chew for fresh breath!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Romans crowned winners with parsley, leafy victory vibes!"
+      "alert": "Romans crowned winners with parsley, leafy victory vibes!",
+      "tags": [
+        "kitchen",
+        "container"
+      ]
     },
     {
       "id": 15,
@@ -148,7 +209,11 @@
       "benefits": "Blend into pepper soup or salsa, its bold kick divides the crowd!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Cilantro's seeds are coriander, two flavors, one plant!"
+      "alert": "Cilantro's seeds are coriander, two flavors, one plant!",
+      "tags": [
+        "kitchen",
+        "container"
+      ]
     },
     {
       "id": 16,
@@ -158,7 +223,12 @@
       "benefits": "Antimicrobial and tasty, sprinkle on meats or brew for a healing tea!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Oregano means 'mountain joy' in Greek, peak flavor!"
+      "alert": "Oregano means 'mountain joy' in Greek, peak flavor!",
+      "tags": [
+        "kitchen",
+        "tea",
+        "container"
+      ]
     },
     {
       "id": 17,
@@ -168,7 +238,11 @@
       "benefits": "Add to seafood or suya sautece, its feathery flair lifts every bite!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Dill seeds kept churchgoers awake, sleepy no more!"
+      "alert": "Dill seeds kept churchgoers awake, sleepy no more!",
+      "tags": [
+        "kitchen",
+        "container"
+      ]
     },
     {
       "id": 18,
@@ -178,7 +252,12 @@
       "benefits": "Anti, inflammatory and wise, roast with chicken or sip as tea for wellness!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Sage was traded for tea in ancient China, pricey wisdom!"
+      "alert": "Sage was traded for tea in ancient China, pricey wisdom!",
+      "tags": [
+        "kitchen",
+        "tea",
+        "gifting"
+      ]
     },
     {
       "id": 19,
@@ -188,7 +267,11 @@
       "benefits": "Snip over jollof or stew, purple blooms add flair to flavor!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Chives bloom purple, garnish with sass!"
+      "alert": "Chives bloom purple, garnish with sass!",
+      "tags": [
+        "kitchen",
+        "container"
+      ]
     },
     {
       "id": 20,
@@ -198,7 +281,11 @@
       "benefits": "Elevate chicken stew or sauteces, its dragon roots bring bold taste!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Tarragon's name means 'little dragon'-fiery flavor!"
+      "alert": "Tarragon's name means 'little dragon'-fiery flavor!",
+      "tags": [
+        "kitchen",
+        "gifting"
+      ]
     },
     {
       "id": 21,
@@ -208,7 +295,12 @@
       "benefits": "Relaxes and soothes, add to kunu or bake into cakes for a floral chill!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Lavender's name comes from 'lavare'-Roman bath vibes!"
+      "alert": "Lavender's name comes from 'lavare'-Roman bath vibes!",
+      "tags": [
+        "tea",
+        "gifting",
+        "container"
+      ]
     },
     {
       "id": 22,
@@ -218,7 +310,12 @@
       "benefits": "Toss into stew or eat raw, little bursts of sweet-tart joy!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Cherry tomatoes are berries, botanical surprise!"
+      "alert": "Cherry tomatoes are berries, botanical surprise!",
+      "tags": [
+        "kitchen",
+        "container",
+        "fruiting"
+      ]
     },
     {
       "id": 23,
@@ -228,7 +325,11 @@
       "benefits": "More vitamin C than oranges, blend into smoothies or sauteté for power!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Kale's a superfood champ, leafy strength in every bite!"
+      "alert": "Kale's a superfood champ, leafy strength in every bite!",
+      "tags": [
+        "kitchen",
+        "container"
+      ]
     },
     {
       "id": 24,
@@ -238,7 +339,12 @@
       "benefits": "Aids digestion and freshens breath, roast with fish or sip as tea!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Fennel was chewed in ancient India, breath mint OG!"
+      "alert": "Fennel was chewed in ancient India, breath mint OG!",
+      "tags": [
+        "kitchen",
+        "tea",
+        "container"
+      ]
     },
     {
       "id": 25,
@@ -248,7 +354,11 @@
       "benefits": "Fry into soups or stews, its aroma kicks up the heat!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Indian Curry leaves aren't curry powder, leafy impostor!"
+      "alert": "Indian Curry leaves aren't curry powder, leafy impostor!",
+      "tags": [
+        "kitchen",
+        "container"
+      ]
     },
     {
       "id": 26,
@@ -258,7 +368,12 @@
       "benefits": "Brew into tea or enjoy its scent, nighttime blooms steal the show!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Jasmine blooms at night, moth party central!"
+      "alert": "Jasmine blooms at night, moth party central!",
+      "tags": [
+        "tea",
+        "gifting",
+        "container"
+      ]
     },
     {
       "id": 27,
@@ -268,7 +383,12 @@
       "benefits": "Eases headaches and adds flavor, stir into stew or sip as tea!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Greeks used marjoram for headaches, herb lullaby!"
+      "alert": "Greeks used marjoram for headaches, herb lullaby!",
+      "tags": [
+        "kitchen",
+        "tea",
+        "container"
+      ]
     },
     {
       "id": 28,
@@ -278,7 +398,11 @@
       "benefits": "Detoxes and hydrates, chop into egusi or snack raw for crunch!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Celery started in marshes, swamp to superstar!"
+      "alert": "Celery started in marshes, swamp to superstar!",
+      "tags": [
+        "kitchen",
+        "container"
+      ]
     }
   ],
   "fruits": [
@@ -290,7 +414,12 @@
       "benefits": "Boosts immunity with antioxidants, blend into smoothies or snack fresh for a sweet lift!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Strawberries aren't true berries, seeds on the outside fool us all!"
+      "alert": "Strawberries aren't true berries, seeds on the outside fool us all!",
+      "tags": [
+        "fruiting",
+        "gifting",
+        "container"
+      ]
     },
     {
       "id": 30,
@@ -300,7 +429,11 @@
       "benefits": "Eat fresh or juice, warm, climate apples with a crisp, sweet bite!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Anna apples were bred in Israel, sun-loving sweeties!"
+      "alert": "Anna apples were bred in Israel, sun-loving sweeties!",
+      "tags": [
+        "fruiting",
+        "tree"
+      ]
     },
     {
       "id": 31,
@@ -310,7 +443,11 @@
       "benefits": "Slice into salads or bake, red blush means extra antioxidants!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Red apples get their color from anthocyanins, sun-kissed beauty!"
+      "alert": "Red apples get their color from anthocyanins, sun-kissed beauty!",
+      "tags": [
+        "fruiting",
+        "gifting"
+      ]
     },
     {
       "id": 32,
@@ -320,7 +457,11 @@
       "benefits": "Juice or bake into pies, tartness cuts through the sweetness!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Green apples have less sugar, tart and sassy!"
+      "alert": "Green apples have less sugar, tart and sassy!",
+      "tags": [
+        "fruiting",
+        "gifting"
+      ]
     },
     {
       "id": 33,
@@ -330,7 +471,11 @@
       "benefits": "Snack fresh or blend, tropical sweetness meets Nigerian sun!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Wambugu apples thrive in heat-Kenya's juicy export!"
+      "alert": "Wambugu apples thrive in heat-Kenya's juicy export!",
+      "tags": [
+        "fruiting",
+        "tree"
+      ]
     },
     {
       "id": 34,
@@ -340,7 +485,13 @@
       "benefits": "Fights inflammation, juice it or sprinkle seeds for a tart health boost!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Pomegranates average 613 seeds, count 'em for fun!"
+      "alert": "Pomegranates average 613 seeds, count 'em for fun!",
+      "tags": [
+        "fruiting",
+        "tree",
+        "gifting",
+        "container"
+      ]
     },
     {
       "id": 35,
@@ -350,7 +501,11 @@
       "benefits": "Eat fresh or dry, nature's candy with a fiber punch!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Figs are 5,000 years old, ancient sweetness!"
+      "alert": "Figs are 5,000 years old, ancient sweetness!",
+      "tags": [
+        "fruiting",
+        "tree"
+      ]
     },
     {
       "id": 36,
@@ -360,7 +515,12 @@
       "benefits": "Peel and eat or juice, citrus convenience at its best!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Mandarins were named after Chinese officials, fancy robes!"
+      "alert": "Mandarins were named after Chinese officials, fancy robes!",
+      "tags": [
+        "citrus",
+        "fruiting",
+        "tree"
+      ]
     },
     {
       "id": 37,
@@ -370,7 +530,12 @@
       "benefits": "Juice or segment, its funky neck shape screams flavor royalty!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Tangelo's neck is its signature, citrus crown!"
+      "alert": "Tangelo's neck is its signature, citrus crown!",
+      "tags": [
+        "citrus",
+        "fruiting",
+        "tree"
+      ]
     },
     {
       "id": 38,
@@ -380,7 +545,12 @@
       "benefits": "Zest into cakes or juice, sweet citrus with a mandarin twist!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Mayer lemons are a mandarin hybrid-China's sweet gift!"
+      "alert": "Mayer lemons are a mandarin hybrid-China's sweet gift!",
+      "tags": [
+        "citrus",
+        "fruiting",
+        "container"
+      ]
     },
     {
       "id": 39,
@@ -390,7 +560,12 @@
       "benefits": "Squeeze into tea or marinade, tartness that never quits!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Eureka lemons started in California-1850s citrus star!"
+      "alert": "Eureka lemons started in California-1850s citrus star!",
+      "tags": [
+        "citrus",
+        "fruiting",
+        "container"
+      ]
     },
     {
       "id": 40,
@@ -400,7 +575,13 @@
       "benefits": "Slice for drinks or decor, pink insides steal the show!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Variegated lemons hide pink flesh, party inside!"
+      "alert": "Variegated lemons hide pink flesh, party inside!",
+      "tags": [
+        "citrus",
+        "fruiting",
+        "gifting",
+        "container"
+      ]
     },
     {
       "id": 41,
@@ -410,7 +591,12 @@
       "benefits": "Add to pepper soup, tiny size, big flavor punch!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Assam lemons spice up Indian curries, fiery little guys!"
+      "alert": "Assam lemons spice up Indian curries, fiery little guys!",
+      "tags": [
+        "citrus",
+        "fruiting",
+        "container"
+      ]
     },
     {
       "id": 42,
@@ -420,7 +606,12 @@
       "benefits": "Heart, healthy lycopene, juice it red for a vibrant boost!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Red Grape Citrus shares pigments with tomatoes, color cousins!"
+      "alert": "Red Grape Citrus shares pigments with tomatoes, color cousins!",
+      "tags": [
+        "citrus",
+        "fruiting",
+        "container"
+      ]
     },
     {
       "id": 43,
@@ -430,7 +621,8 @@
       "benefits": "Marinate suya or squeeze into drinks, small but mighty!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Calamansi is a kumquat hybrid, tiny tang titan!"
+      "alert": "Calamansi is a kumquat hybrid, tiny tang titan!",
+      "tags": []
     },
     {
       "id": 44,
@@ -440,7 +632,8 @@
       "benefits": "Peel and eat or juice, navel's baby orange inside is adorable!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Navel oranges have a mini orange inside, cute quirk!"
+      "alert": "Navel oranges have a mini orange inside, cute quirk!",
+      "tags": []
     },
     {
       "id": 45,
@@ -450,7 +643,12 @@
       "benefits": "Juice Valencia oranges for a sweet drink or use in fruit salads. In Nigeria, they're a juicy staple, adding sunshine to meals and refreshments!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Valencia oranges are the world's top juice orange, named after the Spanish city of Valencia."
+      "alert": "Valencia oranges are the world's top juice orange, named after the Spanish city of Valencia.",
+      "tags": [
+        "citrus",
+        "fruiting",
+        "tree"
+      ]
     },
     {
       "id": 46,
@@ -460,7 +658,8 @@
       "benefits": "Eat kumquats whole for a burst of flavor or mix with mangoes. In Nigeria, they're a quirky snack, adding a sweet peel and tart flesh to your day!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Kumquats are the only citrus fruit where the peel is sweeter than the flesh."
+      "alert": "Kumquats are the only citrus fruit where the peel is sweeter than the flesh.",
+      "tags": []
     },
     {
       "id": 47,
@@ -470,7 +669,8 @@
       "benefits": "Peel clementines for an easy snack or juice with pineapple. In Nigeria, their sweetness makes them a kid, friendly treat and a salad staple!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Clementines were discovered by a French missionary, Father Clément, in Algeria in the early 1900s."
+      "alert": "Clementines were discovered by a French missionary, Father Clément, in Algeria in the early 1900s.",
+      "tags": []
     },
     {
       "id": 48,
@@ -480,7 +680,11 @@
       "benefits": "Mulberries support blood health with iron and fight aging with antioxidants. In Nigeria, dry them for snacks or brew into tea for a nutritious boost!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Mulberry trees were cultivated by the Chinese for 5,000 years to feed silkworms for silk production."
+      "alert": "Mulberry trees were cultivated by the Chinese for 5,000 years to feed silkworms for silk production.",
+      "tags": [
+        "fruiting",
+        "tree"
+      ]
     },
     {
       "id": 49,
@@ -490,7 +694,8 @@
       "benefits": "Dry Pakistan long mulberries for a sweet snack or mix with nuts. In Nigeria's north, they're a juicy treat, perfect for kids and adults alike!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Pakistan Long Mulberries can grow up to 3 inches long, much larger than typical mulberries."
+      "alert": "Pakistan Long Mulberries can grow up to 3 inches long, much larger than typical mulberries.",
+      "tags": []
     },
     {
       "id": 50,
@@ -500,7 +705,8 @@
       "benefits": "Blackberries are rich in antioxidants, supporting heart health and reducing inflammation. In Nigeria, blend them into smoothies or eat fresh for a tart, nutritious snack, perfect for a healthy boost!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Blackberries were used by ancient Greeks to treat gout due to their anti, inflammatory properties."
+      "alert": "Blackberries were used by ancient Greeks to treat gout due to their anti, inflammatory properties.",
+      "tags": []
     },
     {
       "id": 51,
@@ -510,7 +716,11 @@
       "benefits": "Soursop's antioxidants may boost immunity and energy. In Nigeria, juice it with ginger for a refreshing drink or eat the flesh as a natural remedy, popular for its wellness properties!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Soursop seeds contain annonacin, a compound studied for its potential anti, cancer properties."
+      "alert": "Soursop seeds contain annonacin, a compound studied for its potential anti, cancer properties.",
+      "tags": [
+        "fruiting",
+        "tree"
+      ]
     },
     {
       "id": 52,
@@ -520,7 +730,12 @@
       "benefits": "Scoop custard apple flesh as a sweet snack or blend into smoothies. In Nigeria, it's a beloved treat, often enjoyed fresh or mixed with local fruits for a creamy delight!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Custard apples were prized by the Incas and are nicknamed 'the fruit of the gods.'"
+      "alert": "Custard apples were prized by the Incas and are nicknamed 'the fruit of the gods.'",
+      "tags": [
+        "fruiting",
+        "tree",
+        "gifting"
+      ]
     },
     {
       "id": 53,
@@ -530,7 +745,8 @@
       "benefits": "Eat sweetsop fresh for a sugary treat or juice it with lime. In Nigeria, it's a street snack favorite, loved for its sweet, custard-like texture!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Sweetsop's scientific name, Annona squamosa, refers to its scaly skin resembling a pine cone."
+      "alert": "Sweetsop's scientific name, Annona squamosa, refers to its scaly skin resembling a pine cone.",
+      "tags": []
     },
     {
       "id": 54,
@@ -540,7 +756,8 @@
       "benefits": "Eat cherries fresh as a premium snack or top cakes with them. In Nigeria, their rarity makes them a special addition to fruit salads or desserts!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Cherries were brought to Rome from Turkey in 72 BCE by a general named Lucullus."
+      "alert": "Cherries were brought to Rome from Turkey in 72 BCE by a general named Lucullus.",
+      "tags": []
     },
     {
       "id": 55,
@@ -550,7 +767,11 @@
       "benefits": "Plums aid digestion and boost immunity with their vitamin content. In Nigeria, enjoy them fresh or dried as prunes for a fiber, rich snack!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Plums were domesticated in China over 2,000 years ago and are related to peaches and almonds."
+      "alert": "Plums were domesticated in China over 2,000 years ago and are related to peaches and almonds.",
+      "tags": [
+        "fruiting",
+        "tree"
+      ]
     },
     {
       "id": 56,
@@ -560,7 +781,12 @@
       "benefits": "Turn yellow plums into jam or slice into salads. In Nigeria, their sweetness makes them a delightful addition to fruit mixes or a standalone treat!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Yellow plums are often sweeter because they ripen longer on the tree than darker varieties."
+      "alert": "Yellow plums are often sweeter because they ripen longer on the tree than darker varieties.",
+      "tags": [
+        "fruiting",
+        "tree",
+        "gifting"
+      ]
     },
     {
       "id": 57,
@@ -570,7 +796,8 @@
       "benefits": "Dwarf Hass avocados are packed with healthy fats that support heart health. In Nigeria, mash them with bread or blend into smoothies for a creamy, nutritious boost!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Hass avocados are named after Rudolph Hass, a mailman who patented the variety in 1935."
+      "alert": "Hass avocados are named after Rudolph Hass, a mailman who patented the variety in 1935.",
+      "tags": []
     },
     {
       "id": 58,
@@ -580,7 +807,8 @@
       "benefits": "Jumbo white guavas are loaded with vitamin C, great for immunity. In Nigeria, juice them or eat fresh for a sweet, healthy snack that fights colds!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Guavas have more vitamin C per gram than oranges and were used by sailors to prevent scurvy."
+      "alert": "Guavas have more vitamin C per gram than oranges and were used by sailors to prevent scurvy.",
+      "tags": []
     },
     {
       "id": 59,
@@ -590,7 +818,8 @@
       "benefits": "Eat seeded grapes fresh or mix with nuts for a snack. In Nigeria's north, they're a juicy addition to fruit salads, bringing a classic grape flavor!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Grapes were one of the first fruits to be fermented into wine, over 8,000 years ago."
+      "alert": "Grapes were one of the first fruits to be fermented into wine, over 8,000 years ago.",
+      "tags": []
     },
     {
       "id": 60,
@@ -600,7 +829,8 @@
       "benefits": "Enjoy seedless grapes as a convenient snack or toss into salads. In Nigeria, their ease and sweetness make them a luxury treat for all ages!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Seedless grapes are created through selective breeding, not genetic modification."
+      "alert": "Seedless grapes are created through selective breeding, not genetic modification.",
+      "tags": []
     },
     {
       "id": 61,
@@ -610,7 +840,8 @@
       "benefits": "Dwarf pawpaw's papain aids digestion, and its vitamins boost immunity. In Nigeria, enjoy it fresh or in smoothies for a tropical, healthy treat!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Papayas contain papain, an enzyme that helps digest proteins and is used in meat tenderizers."
+      "alert": "Papayas contain papain, an enzyme that helps digest proteins and is used in meat tenderizers.",
+      "tags": []
     },
     {
       "id": 62,
@@ -620,7 +851,11 @@
       "benefits": "Eat bananas fresh or fry them as plantain chips. In Nigeria, they're a versatile staple, enjoyed alone or paired with groundnut for a classic combo!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Bananas are the world's most consumed fruit and grow upside, down, pointing upward."
+      "alert": "Bananas are the world's most consumed fruit and grow upside, down, pointing upward.",
+      "tags": [
+        "fruiting",
+        "container"
+      ]
     },
     {
       "id": 63,
@@ -630,8 +865,8 @@
       "benefits": "Watermelon hydrates and provides lycopene for heart health. In Nigeria, enjoy it fresh or juice it for a cool, sweet treat, perfect for hot days!",
       "price": "Contact us for current pricing",
       "priceMessage": "Contact us for current pricing",
-      "alert": "Watermelons were first grown in Egypt 5,000 years ago and depicted in tomb paintings."
+      "alert": "Watermelons were first grown in Egypt 5,000 years ago and depicted in tomb paintings.",
+      "tags": []
     }
   ]
 }
-
