@@ -1,0 +1,46 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/send-email",
+        "function": "api"
+      },
+      {
+        "source": "/herbs.html",
+        "destination": "/herbs.html"
+      },
+      {
+        "source": "/contact.html",
+        "destination": "/contact.html"
+      },
+      {
+        "source": "/about.html",
+        "destination": "/about.html"
+      },
+      {
+        "source": "/blog.html",
+        "destination": "/blog.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "/sitemap.xml",
+        "headers": [{"key": "Content-Type", "value": "application/xml"}]
+      },
+      {
+        "source": "/robots.txt",
+        "headers": [{"key": "Content-Type", "value": "text/plain"}]
+      }
+    ]
+  }
+}
