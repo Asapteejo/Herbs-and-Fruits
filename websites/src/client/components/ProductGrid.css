@@ -1,0 +1,162 @@
+.catalog-shell {
+  display: grid;
+  gap: 24px;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-bar button {
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid rgba(24, 38, 29, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 250, 241, 0.9);
+  color: #33453a;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-bar button:hover {
+  transform: translateY(-2px);
+}
+
+.filter-bar button.is-active {
+  background: linear-gradient(135deg, #2d5b43, #1f4733);
+  color: #fff;
+  border-color: transparent;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.product-card {
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgba(255, 252, 246, 0.9);
+  border: 1px solid rgba(24, 38, 29, 0.08);
+  box-shadow: 0 24px 60px rgba(31, 59, 47, 0.12);
+}
+
+.product-card.herb {
+  background: linear-gradient(180deg, rgba(237, 246, 239, 0.96), rgba(255, 252, 246, 0.94));
+}
+
+.product-card.fruit {
+  background: linear-gradient(180deg, rgba(252, 241, 229, 0.96), rgba(255, 252, 246, 0.94));
+}
+
+.card-image-button {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  position: relative;
+}
+
+.product-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.product-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(255, 252, 246, 0.92);
+  color: #18261d;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.product-copy {
+  padding: 22px;
+  display: grid;
+  gap: 14px;
+}
+
+.product-copy h3 {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-size: 1.55rem;
+  line-height: 1.02;
+}
+
+.product-description,
+.product-meta p {
+  margin: 0;
+  color: #5f6f63;
+}
+
+.product-meta {
+  display: grid;
+  gap: 6px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(24, 38, 29, 0.1);
+}
+
+.product-meta span {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #2d5b43;
+}
+
+.product-footer {
+  display: grid;
+  gap: 14px;
+}
+
+.price {
+  margin: 0;
+  font-weight: 800;
+  color: #a53f2b;
+}
+
+.enquiry-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: rgba(45, 91, 67, 0.1);
+  color: #2d5b43;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.catalog-state,
+.catalog-message {
+  min-height: 240px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #5f6f63;
+}
+
+@media (max-width: 640px) {
+  .product-image {
+    height: 220px;
+  }
+
+  .product-copy {
+    padding: 18px;
+  }
+}

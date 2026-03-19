@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Herbs and Fruits Nigeria for pricing, availability, and planting support.">
+    <meta name="keywords" content="contact Herbs and Fruits Nigeria, herbs Nigeria, fruit plants Nigeria">
+    <meta name="robots" content="index, follow">
+    <title>Contact | Herbs and Fruits Nigeria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="page-shell">
+        <div class="leaf-background"></div>
+
+        <header class="site-header">
+            <nav class="menu">
+                <a class="brand" href="index.html" aria-label="Herbs and Fruits Nigeria home">
+                    <span class="brand-mark">
+                        <span class="brand-icon"><i class="fa-solid fa-seedling"></i></span>
+                        <span class="brand-copy">
+                            <span class="brand-title">Herbs and Fruits</span>
+                            <span class="brand-subtitle">Grown in Nigeria</span>
+                        </span>
+                    </span>
+                </a>
+                <button class="menu-toggle" type="button" aria-label="Open navigation" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="menu-list" id="menuList">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="herbs.html">Catalog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-intro">
+                <div class="intro-grid">
+                    <div class="intro-copy">
+                        <span class="eyebrow">Direct contact</span>
+                        <h1>Ask about stock, pricing, delivery, or what to plant next.</h1>
+                        <p>The contact experience should be straightforward. Browse first if you want context, then reach out for current availability, recommendations, and support.</p>
+                    </div>
+                    <article class="panel intro-aside">
+                        <span class="eyebrow">Fastest route</span>
+                        <h2>WhatsApp remains the quickest way to get a response.</h2>
+                        <p>For structured inquiries, the message form is still available below.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="contact-layout">
+                <article class="contact-panel">
+                    <span class="eyebrow">Reach us</span>
+                    <h2>Contact channels</h2>
+                    <p>Use whichever route fits the request. Pricing and availability questions are usually easiest over WhatsApp.</p>
+                    <div class="contact-stack">
+                        <a class="info-row" href="https://wa.me/2347064440604?text=Hello%20Herbs%20and%20Fruits%20Nigeria" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <p>+234 706 444 0604</p>
+                            </div>
+                        </a>
+                        <a class="info-row" href="mailto:herbsandfruits@gmail.com">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>herbsandfruits@gmail.com</p>
+                            </div>
+                        </a>
+                        <div class="info-row">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Service area</strong>
+                                <p>Nigeria. Reach out with your location and we will advise on options and delivery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="contact-panel">
+                    <span class="eyebrow">Send a message</span>
+                    <h3>Tell us what you need</h3>
+                    <p>If you know the plant you want, mention it. If you do not, describe your space, sunlight, and goal.</p>
+                    <form class="contact-form" id="contactForm" action="https://us-central1-herbsandfruits-e0e82.cloudfunctions.net/api/send-email" method="POST">
+                        <div class="form-row">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-row">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Your email">
+                        </div>
+                        <div class="form-row">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Tell us what you want to buy or grow"></textarea>
+                        </div>
+                        <button class="button" type="submit">Send message</button>
+                    </form>
+                </article>
+            </section>
+        </main>
+
+        <div class="floating-links" aria-label="Social links">
+            <a class="floating-link whatsapp" href="https://wa.me/2347064440604?text=Hello%20Herbs%20and%20Fruits%20Nigeria" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a class="floating-link instagram" href="https://www.instagram.com/herbs_and_fruit/" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <p>&copy; 2025 Herbs and Fruits Nigeria. Fresh herbs, fruit plants, and direct growing support.</p>
+                <div class="footer-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menuList = document.getElementById("menuList");
+            if (menuList) {
+                menuList.classList.toggle("active");
+            }
+        }
+    </script>
+</body>
+</html>
